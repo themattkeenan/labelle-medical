@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" fill="none">
+  <!-- Background -->
+  <rect width="600" height="800" fill="#f7f4ea"/>
+
+  <!-- Subtle texture lines -->
+  <line x1="0" y1="0" x2="600" y2="800" stroke="#ede8e0" stroke-width="0.5"/>
+  <line x1="600" y1="0" x2="0" y2="800" stroke="#ede8e0" stroke-width="0.5"/>
+
+  <!-- Rose accent block at bottom -->
+  <rect x="0" y="680" width="600" height="120" fill="#d5a494" opacity="0.12"/>
+  <rect x="0" y="756" width="600" height="44" fill="#d5a494" opacity="0.18"/>
+
+  <!-- Head circle -->
+  <circle cx="300" cy="280" r="115" fill="#d5a494" opacity="0.22"/>
+  <circle cx="300" cy="280" r="90" fill="#d5a494" opacity="0.20"/>
+
+  <!-- Subtle person outline — head -->
+  <circle cx="300" cy="272" r="76" fill="#c9937e" opacity="0.18"/>
+
+  <!-- Shoulders / body shape -->
+  <path d="M100 800 Q100 560 300 520 Q500 560 500 800Z" fill="#d5a494" opacity="0.20"/>
+  <path d="M140 800 Q140 580 300 548 Q460 580 460 800Z" fill="#d5a494" opacity="0.14"/>
+
+  <!-- Vertical rose divider accent -->
+  <rect x="290" y="430" width="20" height="3" fill="#d5a494" opacity="0.5" rx="1.5"/>
+  <rect x="270" y="440" width="60" height="2" fill="#d5a494" opacity="0.3" rx="1"/>
+
+  <!-- Watermark text -->
+  <text x="300" y="500" font-family="Georgia, serif" font-size="11" fill="#c9937e" opacity="0.55" text-anchor="middle" letter-spacing="4">PHOTO COMING SOON</text>
+</svg>
