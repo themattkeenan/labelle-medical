@@ -1,0 +1,299 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const services = [
+  {
+    category: 'Injectables',
+    items: [
+      {
+        title: 'Botox® and Dysport®',
+        desc: 'Our most popular treatment — precision neuromodulator injections that relax the muscles responsible for dynamic wrinkles. Reduce crow\'s feet, forehead lines, frown lines and more for a naturally refreshed look lasting 3–4 months.',
+        href: '/services/botox-dysport',
+        img: '/images/668d7a4f927cf1a08b29000a_optimized_300_c300x450-0x0.jpg',
+        tag: 'Most Popular',
+      },
+      {
+        title: 'Dermal Fillers',
+        desc: 'Restore lost volume and sculpt beautiful contours with Juvederm®, Revanesse®, and Restylane®. Ideal for lips, cheeks, nasolabial folds, and full facial rejuvenation with immediate, long-lasting results.',
+        href: '/services/dermal-fillers',
+        img: '/images/668d7a2c14180d551caad412_optimized_300_c300x450-0x0.jpg',
+      },
+      {
+        title: 'Sculptra®',
+        desc: 'A collagen stimulator that restores facial volume gradually and naturally. Results develop over several months and can last up to two years, making Sculptra® an exceptional investment in your long-term skin health.',
+        href: '/services/sculptra',
+        img: '/images/67b617a395c836c5b5e1de2e_optimized_340_c340x340-0x0.jpg',
+      },
+      {
+        title: 'Skin Boosters',
+        desc: 'Hyaluronic acid microinjections that deeply hydrate and improve skin quality from within. Experience a luminous, glass-skin effect with improved elasticity, texture and a radiant glow.',
+        href: '/services/skin-boosters',
+        img: '/images/67b610adb83461d67ed5a14a_optimized_424_c424x423-0x0.jpg',
+      },
+      {
+        title: 'VAMP by Prollenium',
+        desc: 'An advanced bio-revitalization treatment combining hyaluronic acid with amino acids and antioxidants to deeply nourish, hydrate and rejuvenate skin at a cellular level.',
+        href: '/services/vamp',
+        img: '/images/668d759a38669c905ff1a482_optimized_816_c816x811-0x0.jpg',
+      },
+    ],
+  },
+  {
+    category: 'Laser & Energy Treatments',
+    items: [
+      {
+        title: 'Laser Treatments',
+        desc: 'Advanced laser technology targeting unwanted hair, pigmentation, sun spots, redness and rosacea. Our medical-grade laser systems deliver precise, effective results with minimal downtime.',
+        href: '/services/laser-treatments',
+        img: '/images/668d70ef927cf1a08b28e7e4_optimized_1395_c1395x931-0x0.jpg',
+      },
+      {
+        title: 'Laser Facials',
+        desc: 'A comprehensive laser facial treatment that improves overall skin tone, texture and clarity. Targets fine lines, enlarged pores and uneven pigmentation for a dramatically smoother, more radiant complexion.',
+        href: '/services/laser-facials',
+        img: '/images/668d718d38669c905ff197f9_optimized_931_c931x1395-0x0.jpg',
+      },
+      {
+        title: 'Potenza by Cynosure',
+        desc: 'The most advanced RF microneedling device available. Potenza delivers radiofrequency energy deep into the skin to stimulate collagen, tighten tissue, and dramatically improve skin texture and tone.',
+        href: '/services/potenza',
+        img: '/images/6866d8b823379be9c1e4bf4d_optimized_1398_c1398x930-0x0.jpg',
+      },
+    ],
+  },
+  {
+    category: 'Skin Rejuvenation',
+    items: [
+      {
+        title: 'Medical Microneedling',
+        desc: 'SkinPen medical-grade microneedling creates controlled micro-injuries that trigger your skin\'s natural healing process. The result: dramatically improved texture, reduced scarring, and firmer, more youthful skin.',
+        href: '/services/microneedling',
+        img: '/images/6866d81ccd186242532d7d09_optimized_929_c929x1396-0x0.jpg',
+      },
+      {
+        title: 'PRP Therapy',
+        desc: 'Platelet Rich Plasma therapy uses your body\'s own growth factors to accelerate skin rejuvenation, reduce hair loss, and support healing. Often combined with microneedling for amplified results.',
+        href: '/services/prp',
+        img: '/images/686bf4fa2fc1c8e963240faf_optimized_1024_c1024x1024-0x0.jpg',
+      },
+      {
+        title: 'Medical Grade Chemical Peels',
+        desc: 'Customized chemical peels — from superficial to deep — that renew your complexion by accelerating cell turnover. Effective for acne, hyperpigmentation, sun damage and overall skin brightening.',
+        href: '/services/chemical-peels',
+        img: '/images/6866d83043cdf93d3f9a5f28_optimized_1019_c1019x1273-0x0.jpg',
+      },
+      {
+        title: 'Visia Skin Analysis',
+        desc: 'Comprehensive skin imaging technology that reveals hidden skin concerns beneath the surface. Used during consultations to create precise, data-driven treatment plans tailored to your unique skin.',
+        href: '/services/visia-analysis',
+        img: '/images/668d71e838669c905ff19911_optimized_1140_c1140x1140-0x0.jpg',
+      },
+      {
+        title: 'Cosmetic Skin Lesion Removal',
+        desc: 'Safe, effective removal of unwanted skin tags, milia, moles, and other benign skin lesions using advanced clinical techniques for smooth, clear skin.',
+        href: '/services/lesion-removal',
+        img: '/images/668c47e0bb3c3a7e400c55d9_optimized_557.jpg',
+      },
+    ],
+  },
+  {
+    category: 'Specialty Services',
+    items: [
+      {
+        title: 'Sclerotherapy',
+        desc: 'Clinically proven spider vein treatment. A specialized solution is injected directly into affected veins, causing them to fade and disappear over time — restoring smooth, even-toned skin on legs and beyond.',
+        href: '/services/sclerotherapy',
+        img: '/images/6866d7f443cdf93d3f9a5e18_optimized_1398_c1398x930-0x0.jpg',
+      },
+      {
+        title: 'Latisse®',
+        desc: 'FDA-approved prescription treatment for hypotrichosis (inadequate eyelashes). Latisse® grows longer, fuller, darker lashes over time — eliminating the need for extensions or falsies.',
+        href: '/services/latisse',
+        img: '/images/686bf1492fc1c8e9632400ac_optimized_1671_c1019x1273-438x333.jpg',
+      },
+      {
+        title: 'Skin Care Consultation',
+        desc: 'A dedicated consultation with our team to assess your skin concerns and goals, review your current skincare routine, and build a customized regimen using medical-grade products.',
+        href: '/services/consultation',
+        img: '/images/68751a2a45bbd1f01958dbef_optimized_930_c930x1396-0x0.jpg',
+      },
+    ],
+  },
+  {
+    category: 'Medical-Grade Skincare',
+    items: [
+      { title: 'SkinCeuticals®', desc: 'Science-backed antioxidants, correctives, and preventative skincare trusted by dermatologists worldwide.', href: '/services/skinceuticals', img: '/images/6875184045bbd1f01958d396_optimized_1019_c1019x1273-0x0.jpg' },
+      { title: 'Vivier Skin', desc: 'Canada\'s leading prescription-grade skincare featuring advanced vitamin C formulations and brightening treatments.', href: '/services/vivier', img: '/images/6876a1917f9401c6a8eed2f3_optimized_1019_c1019x1273-0x0.jpg' },
+      { title: 'EltaMD', desc: 'Clinically proven sun protection and skincare products recommended by dermatologists and plastic surgeons.', href: '/services/eltamd', img: '/images/687519a4f7269931b26765ae_optimized_1080_c999x999-81x81.jpg' },
+      { title: 'Skinbetter Science', desc: 'Award-winning corrective formulas with patented delivery systems for transformative, visible results.', href: '/services/skinbetter', img: '/images/6875184ff7269931b2675fca_optimized_1019.jpg' },
+    ],
+  },
+];
+---
+
+<Layout
+  title="All Services — Medical Aesthetics, Botox, Laser & Skincare"
+  description="Explore La Belle Medical Aesthetic Clinic's full range of treatments: Botox, dermal fillers, Sculptra, laser treatments, microneedling, PRP, sclerotherapy and premium skincare in Quispamsis, NB."
+>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="page-hero__bg">
+      <img src="/images/6866d7e223379be9c1e4bbd4_optimized_1398.jpg" alt="Medical aesthetics treatments" loading="eager" fetchpriority="high" width="1398" height="700" />
+      <div class="page-hero__overlay"></div>
+    </div>
+    <div class="container page-hero__content text-center">
+      <p class="eyebrow" style="color:var(--rose)">Expert Treatments</p>
+      <h1 style="color:var(--white)">Our Services</h1>
+      <div class="divider"></div>
+      <p style="color:rgba(255,255,255,0.8); max-width:56ch; margin-inline:auto;">From injectables to advanced laser technology — every treatment is administered with clinical precision and a dedication to natural, beautiful results.</p>
+    </div>
+  </section>
+
+  <!-- Services by Category -->
+  {services.map((cat) => (
+    <section class="section services-section">
+      <div class="container">
+        <div class="cat-header" data-reveal="fade">
+          <h2 class="cat-header__title">{cat.category}</h2>
+          <div class="divider divider--left"></div>
+        </div>
+        <div class="services-list">
+          {cat.items.map((item, i) => (
+            <a href={item.href} class="service-row" data-reveal data-delay={String((i % 2 + 1) * 100)}>
+              <div class="service-row__image">
+                <img src={item.img} alt={item.title} loading="lazy" width="400" height="300" />
+                {item.tag && <span class="service-row__tag">{item.tag}</span>}
+              </div>
+              <div class="service-row__content">
+                <h3 class="service-row__title">{item.title}</h3>
+                <p class="service-row__desc">{item.desc}</p>
+                <span class="service-row__cta">Learn More <span aria-hidden="true">→</span></span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <!-- Not Sure CTA -->
+  <section class="section" style="background:var(--cream-dark)">
+    <div class="container text-center">
+      <p class="eyebrow" data-reveal="fade">Not Sure Where to Start?</p>
+      <h2 data-reveal data-delay="100">We'll Guide You</h2>
+      <div class="divider" data-reveal="fade" data-delay="200"></div>
+      <p class="lead" data-reveal data-delay="200">Finding the right treatment for your skin concerns can feel overwhelming. Book a complimentary consultation — our team will assess your skin and design a plan tailored to your unique goals.</p>
+      <a href="https://labellemedicalclinic.janeapp.com/" target="_blank" rel="noopener" class="btn btn--primary" style="margin-top:2.5rem" data-reveal data-delay="300">
+        Book a Free Consultation
+      </a>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+.page-hero {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.page-hero__bg { position: absolute; inset: 0; }
+.page-hero__bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+.page-hero__overlay { position: absolute; inset: 0; background: rgba(17,17,17,0.62); }
+.page-hero__content { position: relative; z-index: 1; padding-top: 80px; }
+
+.services-section:nth-child(even) { background: var(--cream-dark); }
+
+.cat-header { margin-bottom: 2.5rem; }
+.cat-header__title {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  color: var(--charcoal);
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(213,164,148,0.2);
+  margin-bottom: 0.75rem;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+  gap: 1.5rem;
+}
+
+.service-row {
+  display: flex;
+  flex-direction: column;
+  background: var(--cream);
+  border: 1px solid rgba(213,164,148,0.2);
+  overflow: hidden;
+  transition: transform 0.35s var(--ease), box-shadow 0.35s ease;
+}
+.service-row:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+.service-row__image {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.service-row__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease);
+}
+.service-row:hover .service-row__image img { transform: scale(1.07); }
+.service-row__tag {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: var(--rose);
+  color: var(--white);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.75rem;
+}
+.service-row__content {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex-grow: 1;
+}
+.service-row__title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--charcoal);
+  line-height: 1.2;
+}
+.service-row__desc {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.86rem;
+  line-height: 1.75;
+  color: var(--charcoal-mid);
+  flex-grow: 1;
+  max-width: none;
+}
+.service-row__cta {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--rose);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: gap 0.3s ease;
+}
+.service-row:hover .service-row__cta { gap: 0.75rem; }
+</style>

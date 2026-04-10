@@ -1,0 +1,227 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="About Us — Nurse Practitioner-Owned Medical Aesthetics Clinic"
+  description="Learn about La Belle Medical Aesthetic Clinic — a Nurse Practitioner-owned luxury aesthetics clinic in Quispamsis, NB dedicated to natural, safe, personalized results."
+>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="page-hero__bg">
+      <img src="/images/668c49fc0c795ee329850b2a_optimized_1920.jpg" alt="La Belle clinic" loading="eager" fetchpriority="high" width="1920" height="700" />
+      <div class="page-hero__overlay"></div>
+    </div>
+    <div class="container page-hero__content">
+      <p class="eyebrow" style="color:var(--rose)">Our Story</p>
+      <h1 style="color:var(--white)">About La Belle</h1>
+      <div class="divider"></div>
+      <p style="color:rgba(255,255,255,0.8); max-width:52ch;">A Nurse Practitioner-owned clinic dedicated to enhancing your natural beauty through expert, personalized care.</p>
+    </div>
+  </section>
+
+  <!-- Mission -->
+  <section class="section">
+    <div class="container">
+      <div class="about-split">
+        <div class="about-split__image" data-reveal="left">
+          <img src="/images/668d6e3314180d551caab1ca_optimized_1396.jpg" alt="La Belle Medical Aesthetic Clinic" loading="lazy" width="700" height="900" />
+          <div class="about-split__image-accent" aria-hidden="true"></div>
+        </div>
+        <div class="about-split__content">
+          <p class="eyebrow" data-reveal="fade">Who We Are</p>
+          <h2 data-reveal data-delay="100">Luxury Aesthetics Grounded in Clinical Excellence</h2>
+          <div class="divider divider--left" data-reveal="fade" data-delay="200"></div>
+          <p class="lead" data-reveal data-delay="200">
+            At La Belle Medical Aesthetic Clinic, we offer luxury skin treatments and services that help you look and feel your best. Located in Quispamsis, New Brunswick, our clinic is Nurse Practitioner-owned, ensuring you receive exceptional care and attention to achieve safe and natural results.
+          </p>
+          <p data-reveal data-delay="300">
+            Our team is dedicated to working with you to determine the right services and treatments tailored to your specific goals. We take a collaborative approach — listening deeply, assessing thoroughly, and crafting personalized plans that respect both your beauty goals and your wellbeing.
+          </p>
+          <p data-reveal data-delay="400">
+            We proudly offer a comprehensive range of advanced treatments, from Botox® and Dysport® to dermal fillers, laser hair removal, microneedling, Latisse®, sclerotherapy, and IV vitamin infusions. To complement our treatments, we carry premium medical-grade skincare lines including SkinCeuticals®, Vivier Skin, EltaMD, and more.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="values section" style="background:var(--cream-dark)">
+    <div class="container">
+      <div class="section-header text-center" data-reveal="fade">
+        <p class="eyebrow">What Drives Us</p>
+        <h2>Our Core Values</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="values__grid">
+        {[
+          { icon: '⬡', title: 'Clinical Safety First', desc: 'Every treatment is administered with rigorous medical standards. As a Nurse Practitioner-owned clinic, safety is never an afterthought — it\'s our foundation.' },
+          { icon: '◈', title: 'Natural Results', desc: 'We believe in enhancing what you already have — not transforming you into someone else. Our goal is always a refreshed, natural appearance.' },
+          { icon: '◉', title: 'Personalized Care', desc: 'No two people are alike, and neither are their treatment plans. We take time to understand your unique skin, concerns, and aesthetic goals.' },
+          { icon: '◆', title: 'Ongoing Partnership', desc: 'Our relationship with clients doesn\'t end after treatment. We monitor your progress, adjust plans, and provide complimentary follow-ups.' },
+        ].map((v, i) => (
+          <div class="value-card" data-reveal data-delay={String((i + 1) * 100)}>
+            <div class="value-card__icon" aria-hidden="true">{v.icon}</div>
+            <h3>{v.title}</h3>
+            <p>{v.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="team section">
+    <div class="container">
+      <div class="section-header text-center" data-reveal="fade">
+        <p class="eyebrow">Meet the Team</p>
+        <h2>The La Belle Team</h2>
+        <div class="divider"></div>
+        <p class="lead">Our team of dedicated medical professionals brings both clinical expertise and a passion for aesthetic artistry to every appointment.</p>
+      </div>
+      <div class="team__grid">
+        <div class="team-card" data-reveal data-delay="100">
+          <div class="team-card__image">
+            <img src="/images/668d7a4f38669c905ff1afe1_optimized.jpg" alt="La Belle team member" loading="lazy" width="500" height="600" />
+          </div>
+          <div class="team-card__info">
+            <h3>La Belle Team</h3>
+            <p class="team-card__role">Nurse Practitioner & Founder</p>
+            <p>With advanced clinical training and a keen aesthetic eye, our team is dedicated to delivering treatments that are as safe as they are beautiful.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Areas Served -->
+  <section class="areas section" style="background:var(--charcoal)">
+    <div class="container text-center">
+      <p class="eyebrow" style="color:var(--rose)" data-reveal="fade">Where We Serve</p>
+      <h2 style="color:var(--cream)" data-reveal data-delay="100">Proudly Serving New Brunswick</h2>
+      <div class="divider" data-reveal="fade" data-delay="200"></div>
+      <div class="areas__list" data-reveal data-delay="300">
+        {['Quispamsis', 'Saint John', 'Hampton', 'Sussex', 'Fredericton'].map(city => (
+          <span class="area-tag">{city}</span>
+        ))}
+      </div>
+      <p style="color:rgba(255,255,255,0.6); margin-top:2rem; font-size:0.9rem;" data-reveal data-delay="400">
+        Located at 208 Hampton Rd, Quispamsis — convenient for clients across New Brunswick.
+      </p>
+      <a href="/contact" class="btn btn--rose" style="margin-top:2.5rem" data-reveal data-delay="500">
+        Get Directions
+      </a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section text-center" style="background:var(--cream-dark)">
+    <div class="container">
+      <p class="eyebrow" data-reveal="fade">Ready to Begin?</p>
+      <h2 data-reveal data-delay="100">Start Your Beauty Journey Today</h2>
+      <div class="divider" data-reveal="fade" data-delay="200"></div>
+      <p class="lead" data-reveal data-delay="200">Book a consultation and let our team create a personalized treatment plan tailored just for you.</p>
+      <a href="https://labellemedicalclinic.janeapp.com/" target="_blank" rel="noopener" class="btn btn--primary" style="margin-top:2rem" data-reveal data-delay="300">Book a Consultation</a>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+.page-hero {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.page-hero__bg { position: absolute; inset: 0; }
+.page-hero__bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
+.page-hero__overlay { position: absolute; inset: 0; background: rgba(17,17,17,0.6); }
+.page-hero__content { position: relative; z-index: 1; padding-top: 80px; }
+.page-hero__content h1 { margin-bottom: 1rem; }
+
+.about-split {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: center;
+}
+.about-split__image { position: relative; }
+.about-split__image img { width: 100%; height: auto; max-height: 700px; object-fit: cover; }
+.about-split__image-accent {
+  position: absolute;
+  inset: -1.5rem;
+  border: 1px solid rgba(213,164,148,0.3);
+  z-index: -1;
+}
+.about-split__content { display: flex; flex-direction: column; gap: 0; }
+.about-split__content h2 { margin-bottom: 0; }
+.about-split__content p + p { margin-top: 1.25rem; }
+
+.values__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.value-card {
+  background: var(--cream);
+  padding: 2.5rem;
+  border: 1px solid rgba(213,164,148,0.2);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.value-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
+.value-card__icon { font-size: 2rem; color: var(--rose); margin-bottom: 1rem; }
+.value-card h3 { font-size: 1.4rem; margin-bottom: 0.75rem; }
+.value-card p { font-size: 0.9rem; color: var(--charcoal-mid); }
+
+.team__grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+.team-card {
+  max-width: 500px;
+  background: var(--cream-dark);
+  border: 1px solid rgba(213,164,148,0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.team-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+.team-card__image { overflow: hidden; height: 400px; }
+.team-card__image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+.team-card:hover .team-card__image img { transform: scale(1.05); }
+.team-card__info { padding: 2rem; }
+.team-card__info h3 { font-size: 1.5rem; margin-bottom: 0.25rem; }
+.team-card__role { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--rose); margin-bottom: 1rem; }
+.team-card__info p { font-size: 0.9rem; color: var(--charcoal-mid); }
+
+.areas__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.area-tag {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.7);
+  padding: 0.5rem 1.5rem;
+  border: 1px solid rgba(213,164,148,0.3);
+  transition: all 0.3s ease;
+}
+.area-tag:hover { color: var(--cream); border-color: var(--rose); }
+
+@media (max-width: 900px) {
+  .about-split { grid-template-columns: 1fr; }
+  .values__grid { grid-template-columns: 1fr; }
+}
+</style>

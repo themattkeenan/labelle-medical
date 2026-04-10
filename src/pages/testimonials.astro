@@ -1,0 +1,234 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const testimonials = [
+  { quote: "I was so nervous about getting Botox for the first time, but the team at La Belle made me feel completely at ease. The results are so natural — I look refreshed, not frozen. I couldn't be happier!", author: "Sarah M.", location: "Quispamsis", stars: 5 },
+  { quote: "Absolutely love this clinic. The staff is incredibly knowledgeable and genuinely care about giving you results that enhance your natural beauty. My skin has never looked better.", author: "Jennifer L.", location: "Saint John", stars: 5 },
+  { quote: "I've been going to La Belle for over a year now for laser treatments and the results have been amazing. Professional, clean, and they always make me feel so comfortable.", author: "Amanda K.", location: "Hampton", stars: 5 },
+  { quote: "The microneedling treatment completely transformed my skin texture. I had acne scars for years and after a few sessions they've faded dramatically. The team is so professional and kind.", author: "Melissa R.", location: "Sussex", stars: 5 },
+  { quote: "I've been looking for a clinic I could trust for fillers and I finally found it at La Belle. The results look so natural and the team walked me through every step. Will definitely be back!", author: "Christine B.", location: "Quispamsis", stars: 5 },
+  { quote: "From the moment you walk in, you feel welcomed and at ease. The clinic is beautiful, the treatments are outstanding, and the results speak for themselves. Highly recommend!", author: "Donna T.", location: "Saint John", stars: 5 },
+  { quote: "I had sclerotherapy for spider veins on my legs and I'm absolutely thrilled with the results. The procedure was comfortable and the staff explained everything so clearly.", author: "Patricia N.", location: "Fredericton", stars: 5 },
+  { quote: "Started with SkinCeuticals® products recommended by the team and my skin has honestly never looked this good. They really take the time to understand your skin and make personalized recommendations.", author: "Rachel S.", location: "Quispamsis", stars: 5 },
+  { quote: "The PRP therapy combined with microneedling has made an incredible difference in my hair. The team is compassionate and thorough. So grateful I found La Belle!", author: "Thomas C.", location: "Hampton", stars: 5 },
+];
+---
+
+<Layout
+  title="Client Testimonials — Real Reviews from Real Clients"
+  description="Read what La Belle Medical Aesthetic Clinic clients say about their treatment experiences — from Botox to laser treatments, sclerotherapy and skincare in Quispamsis, NB."
+>
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="page-hero__bg">
+      <img src="/images/668c49fc0c795ee329850b2a_optimized_1920.jpg" alt="Happy clients" loading="eager" fetchpriority="high" width="1920" height="700" />
+      <div class="page-hero__overlay"></div>
+    </div>
+    <div class="container page-hero__content text-center">
+      <p class="eyebrow" style="color:var(--rose)">Client Stories</p>
+      <h1 style="color:var(--white)">What Our Clients Say</h1>
+      <div class="divider"></div>
+      <p style="color:rgba(255,255,255,0.8); max-width:52ch; margin-inline:auto;">Real experiences from real people. Our clients' stories are the truest reflection of the care we provide.</p>
+    </div>
+  </section>
+
+  <!-- Rating Overview -->
+  <section class="rating-banner">
+    <div class="container">
+      <div class="rating-overview" data-reveal="fade">
+        <div class="rating-overview__score">
+          <span class="rating-overview__num">5.0</span>
+          <div>
+            <div class="rating-overview__stars">★★★★★</div>
+            <p>Average Rating</p>
+          </div>
+        </div>
+        <div class="rating-overview__divider" aria-hidden="true"></div>
+        <p class="rating-overview__summary">
+          Our clients consistently rate La Belle Medical Aesthetic Clinic with 5 stars for exceptional results, professional care, and a welcoming, luxurious clinic environment.
+        </p>
+        <div class="rating-overview__links">
+          <a href="https://www.google.com/maps/search/La+Belle+Medical+Aesthetic+Clinic" target="_blank" rel="noopener" class="btn btn--outline">
+            Leave a Google Review
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Grid -->
+  <section class="section">
+    <div class="container">
+      <div class="testimonials-grid">
+        {testimonials.map((t, i) => (
+          <div class="t-card" data-reveal data-delay={String((i % 3 + 1) * 100)}>
+            <div class="t-card__stars" aria-label={`${t.stars} out of 5 stars`}>
+              {'★'.repeat(t.stars)}
+            </div>
+            <div class="t-card__quote-mark" aria-hidden="true">"</div>
+            <blockquote>
+              <p class="t-card__text">{t.quote}</p>
+              <footer class="t-card__author">
+                <strong>{t.author}</strong>
+                <span>{t.location}, NB</span>
+              </footer>
+            </blockquote>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Leave a Review CTA -->
+  <section class="section text-center" style="background:var(--cream-dark)">
+    <div class="container">
+      <p class="eyebrow" data-reveal="fade">Share Your Experience</p>
+      <h2 data-reveal data-delay="100">Loved Your Treatment?</h2>
+      <div class="divider" data-reveal="fade" data-delay="200"></div>
+      <p class="lead" data-reveal data-delay="200">Your review helps others discover the confidence-boosting treatments available at La Belle. We'd be so grateful to hear about your experience.</p>
+      <a href="https://www.google.com/maps/search/La+Belle+Medical+Aesthetic+Clinic" target="_blank" rel="noopener" class="btn btn--primary" style="margin-top:2rem" data-reveal data-delay="300">Leave a Review</a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section text-center" style="background:var(--charcoal)">
+    <div class="container">
+      <p class="eyebrow" style="color:var(--rose)" data-reveal="fade">Join Our Community</p>
+      <h2 style="color:var(--cream)" data-reveal data-delay="100">Experience La Belle for Yourself</h2>
+      <div class="divider" data-reveal="fade" data-delay="200"></div>
+      <a href="https://labellemedicalclinic.janeapp.com/" target="_blank" rel="noopener" class="btn btn--rose" style="margin-top:1.5rem" data-reveal data-delay="300">Book a Consultation</a>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+.page-hero {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.page-hero__bg { position: absolute; inset: 0; }
+.page-hero__bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 60%; }
+.page-hero__overlay { position: absolute; inset: 0; background: rgba(17,17,17,0.65); }
+.page-hero__content { position: relative; z-index: 1; padding-top: 80px; }
+
+.rating-banner {
+  background: var(--cream-dark);
+  padding: 3rem 0;
+  border-bottom: 1px solid rgba(213,164,148,0.2);
+}
+.rating-overview {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+.rating-overview__score {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-shrink: 0;
+}
+.rating-overview__num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 5rem;
+  font-weight: 300;
+  color: var(--charcoal);
+  line-height: 1;
+}
+.rating-overview__stars {
+  color: var(--rose);
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+.rating-overview__score p {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--charcoal-mid);
+  max-width: none;
+}
+.rating-overview__divider {
+  width: 1px;
+  height: 60px;
+  background: rgba(213,164,148,0.3);
+  flex-shrink: 0;
+}
+.rating-overview__summary {
+  flex: 1;
+  min-width: 240px;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--charcoal-mid);
+}
+.rating-overview__links { flex-shrink: 0; }
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.t-card {
+  background: var(--cream-dark);
+  border: 1px solid rgba(213,164,148,0.2);
+  padding: 2.5rem 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+.t-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+.t-card__stars { color: var(--rose); font-size: 0.9rem; letter-spacing: 0.1em; margin-bottom: 1rem; }
+.t-card__quote-mark {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 5rem;
+  line-height: 0.6;
+  color: var(--rose);
+  opacity: 0.25;
+  margin-bottom: 0.75rem;
+}
+.t-card__text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9rem;
+  font-style: italic;
+  line-height: 1.8;
+  color: var(--charcoal);
+  margin-bottom: 1.5rem;
+  max-width: none;
+}
+.t-card__author {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(213,164,148,0.25);
+}
+.t-card__author strong {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--charcoal);
+}
+.t-card__author span {
+  font-size: 0.75rem;
+  color: var(--rose);
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 900px) {
+  .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+  .rating-overview { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+  .rating-overview__divider { display: none; }
+}
+@media (max-width: 600px) {
+  .testimonials-grid { grid-template-columns: 1fr; }
+}
+</style>

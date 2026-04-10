@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://labellemedicalclinic.com/sitemap-index.xml

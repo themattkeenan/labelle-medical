@@ -1,0 +1,157 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const images = [
+  { src: '/images/668d6f1c2930f43a5f441554_optimized_931_c931x1395-0x0.jpg', alt: 'Treatment result', aspect: 'portrait' },
+  { src: '/images/668d70ef927cf1a08b28e7e4_optimized_1395_c1395x931-0x0.jpg', alt: 'Aesthetic procedure', aspect: 'landscape' },
+  { src: '/images/668d713cc42499da19880fec_optimized_1396_c1396x930-0x0.jpg', alt: 'Clinic treatment', aspect: 'landscape' },
+  { src: '/images/668d718d38669c905ff197f9_optimized_931_c931x1395-0x0.jpg', alt: 'Skin treatment', aspect: 'portrait' },
+  { src: '/images/668d71e838669c905ff19911_optimized_1140_c1140x1140-0x0.jpg', alt: 'Medical aesthetics', aspect: 'square' },
+  { src: '/images/668d72ee927cf1a08b28ecbf_optimized_1475_c1475x881-0x0.jpg', alt: 'Beauty treatment', aspect: 'landscape' },
+  { src: '/images/668d759a38669c905ff1a482_optimized_816_c816x811-0x0.jpg', alt: 'Skin care', aspect: 'square' },
+  { src: '/images/668d7a2c14180d551caad412_optimized_300_c300x450-0x0.jpg', alt: 'Before and after', aspect: 'portrait' },
+  { src: '/images/668d7a4f38669c905ff1afe1_optimized.jpg', alt: 'Treatment result', aspect: 'portrait' },
+  { src: '/images/668d7a4f927cf1a08b29000a_optimized_300_c300x450-0x0.jpg', alt: 'Aesthetic result', aspect: 'portrait' },
+  { src: '/images/6866d7e223379be9c1e4bbd4_optimized_1398.jpg', alt: 'Clinic interior', aspect: 'landscape' },
+  { src: '/images/6866d7f443cdf93d3f9a5e18_optimized_1398_c1398x930-0x0.jpg', alt: 'Treatment room', aspect: 'landscape' },
+  { src: '/images/6866d81ccd186242532d7d09_optimized_929_c929x1396-0x0.jpg', alt: 'Skin result', aspect: 'portrait' },
+  { src: '/images/6866d83043cdf93d3f9a5f28_optimized_1019_c1019x1273-0x0.jpg', alt: 'Aesthetic treatment', aspect: 'portrait' },
+  { src: '/images/6866d85543cdf93d3f9a5fe5_optimized_1874_c1019x1273-636x398.jpg', alt: 'Treatment outcome', aspect: 'portrait' },
+  { src: '/images/6866d8b823379be9c1e4bf4d_optimized_1398_c1398x930-0x0.jpg', alt: 'Medical aesthetics', aspect: 'landscape' },
+  { src: '/images/686bc870fc98b09e4ae01b7d_optimized_1920.jpg', alt: 'La Belle clinic', aspect: 'landscape' },
+  { src: '/images/686bf4fa2fc1c8e963240faf_optimized_1024_c1024x1024-0x0.jpg', alt: 'Skin treatment', aspect: 'square' },
+  { src: '/images/686bf6e947e5bf66827f26f1_optimized_1920_c1230x818-377x82.jpg', alt: 'Beauty result', aspect: 'landscape' },
+  { src: '/images/686bf710e674fd2580bf39b3_optimized_1398.jpg', alt: 'Treatment result', aspect: 'landscape' },
+  { src: '/images/6875184045bbd1f01958d396_optimized_1019_c1019x1273-0x0.jpg', alt: 'Skincare products', aspect: 'portrait' },
+  { src: '/images/6875184ff7269931b2675fca_optimized_1019.jpg', alt: 'Medical skincare', aspect: 'portrait' },
+  { src: '/images/687519a4f7269931b26765ae_optimized_1080_c999x999-81x81.jpg', alt: 'Premium skincare', aspect: 'square' },
+  { src: '/images/68751a2a45bbd1f01958dbef_optimized_930_c930x1396-0x0.jpg', alt: 'Skin consultation', aspect: 'portrait' },
+  { src: '/images/6876a1917f9401c6a8eed2f3_optimized_1019_c1019x1273-0x0.jpg', alt: 'Treatment result', aspect: 'portrait' },
+  { src: '/images/67b60d5a95c836c5b5e1b6b7_optimized_570_c570x579-0x0.jpg', alt: 'Aesthetic procedure', aspect: 'square' },
+  { src: '/images/67b610adb83461d67ed5a14a_optimized_424_c424x423-0x0.jpg', alt: 'Skin treatment', aspect: 'square' },
+  { src: '/images/67b617a395c836c5b5e1de2e_optimized_340_c340x340-0x0.jpg', alt: 'Medical aesthetic', aspect: 'square' },
+  { src: '/images/686bf1492fc1c8e9632400ac_optimized_1671_c1019x1273-438x333.jpg', alt: 'Lash treatment', aspect: 'portrait' },
+  { src: '/images/668c49fc0c795ee329850b2a_optimized_1920.jpg', alt: 'Clinic ambiance', aspect: 'landscape' },
+];
+---
+
+<Layout
+  title="Gallery — Treatment Results & Clinic Photos"
+  description="Browse La Belle Medical Aesthetic Clinic's gallery of treatment results, before & after photos, and our beautiful clinic in Quispamsis, NB."
+>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="page-hero__bg">
+      <img src="/images/686bf6e947e5bf66827f26f1_optimized_1920_c1230x818-377x82.jpg" alt="Gallery" loading="eager" fetchpriority="high" width="1230" height="818" />
+      <div class="page-hero__overlay"></div>
+    </div>
+    <div class="container page-hero__content text-center">
+      <p class="eyebrow" style="color:var(--rose)">Results Speak</p>
+      <h1 style="color:var(--white)">Our Gallery</h1>
+      <div class="divider"></div>
+      <p style="color:rgba(255,255,255,0.8); max-width:48ch; margin-inline:auto;">Real results from real clients. Every image tells a story of confidence restored and beauty celebrated.</p>
+    </div>
+  </section>
+
+  <!-- Masonry Gallery -->
+  <section class="section">
+    <div class="container">
+      <div class="masonry-grid">
+        {images.map((img, i) => (
+          <div
+            class:list={['masonry-item', `masonry-item--${img.aspect}`]}
+            data-reveal="fade"
+            data-delay={String((i % 5) * 100)}
+          >
+            <div class="masonry-item__inner">
+              <img
+                src={img.src}
+                alt={img.alt}
+                loading="lazy"
+                width="600"
+                height={img.aspect === 'portrait' ? 800 : img.aspect === 'square' ? 600 : 400}
+              />
+              <div class="masonry-item__overlay">
+                <span class="masonry-item__zoom" aria-hidden="true">+</span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section text-center" style="background:var(--charcoal)">
+    <div class="container">
+      <p class="eyebrow" style="color:var(--rose)" data-reveal="fade">Your Results Await</p>
+      <h2 style="color:var(--cream)" data-reveal data-delay="100">Ready for Your Transformation?</h2>
+      <div class="divider" data-reveal="fade" data-delay="200"></div>
+      <a href="https://labellemedicalclinic.janeapp.com/" target="_blank" rel="noopener" class="btn btn--rose" style="margin-top:1.5rem" data-reveal data-delay="300">Book a Consultation</a>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+.page-hero {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.page-hero__bg { position: absolute; inset: 0; }
+.page-hero__bg img { width: 100%; height: 100%; object-fit: cover; }
+.page-hero__overlay { position: absolute; inset: 0; background: rgba(17,17,17,0.6); }
+.page-hero__content { position: relative; z-index: 1; padding-top: 80px; }
+
+.masonry-grid {
+  columns: 4 260px;
+  column-gap: 1rem;
+}
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.masonry-item__inner {
+  position: relative;
+  overflow: hidden;
+}
+.masonry-item__inner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.6s var(--ease);
+}
+.masonry-item:hover .masonry-item__inner img { transform: scale(1.05); }
+.masonry-item__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(17,17,17,0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.4s ease;
+}
+.masonry-item:hover .masonry-item__overlay { background: rgba(17,17,17,0.35); }
+.masonry-item__zoom {
+  color: var(--white);
+  font-size: 2.5rem;
+  opacity: 0;
+  transform: scale(0.6);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  font-weight: 300;
+}
+.masonry-item:hover .masonry-item__zoom {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media (max-width: 600px) {
+  .masonry-grid { columns: 2 160px; }
+}
+</style>

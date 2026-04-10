@@ -1,0 +1,151 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  transparentHeader?: boolean;
+  noindex?: boolean;
+  canonical?: string;
+}
+
+const {
+  title,
+  description,
+  image = '/images/686bc870fc98b09e4ae01b7d_optimized_1920.jpg',
+  transparentHeader = false,
+  noindex = false,
+  canonical,
+} = Astro.props;
+
+const siteUrl = 'https://labellemedicalclinic.com';
+const fullTitle = title.includes('La Belle') ? title : `${title} | La Belle Medical Aesthetic Clinic`;
+const canonicalUrl = canonical ?? new URL(Astro.url.pathname, siteUrl).href;
+const ogImage = image.startsWith('http') ? image : `${siteUrl}${image}`;
+---
+
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary Meta -->
+  <title>{fullTitle}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalUrl} />
+  {noindex && <meta name="robots" content="noindex, nofollow" />}
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonicalUrl} />
+  <meta property="og:title" content={fullTitle} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:image:alt" content="La Belle Medical Aesthetic Clinic" />
+  <meta property="og:site_name" content="La Belle Medical Aesthetic Clinic" />
+  <meta property="og:locale" content="en_CA" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={fullTitle} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImage} />
+
+  <!-- Geo -->
+  <meta name="geo.region" content="CA-NB" />
+  <meta name="geo.placename" content="Quispamsis" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Fonts preload -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Open+Sans:wght@300;400;600;700&family=Lato:ital,wght@1,300&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Open+Sans:wght@300;400;600;700&family=Lato:ital,wght@1,300&display=swap" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Open+Sans:wght@300;400;600;700&family=Lato:ital,wght@1,300&display=swap" />
+  </noscript>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "@id": "https://labellemedicalclinic.com/#organization",
+      "name": "La Belle Medical Aesthetic Clinic",
+      "alternateName": "La Belle Medical Clinic",
+      "url": "https://labellemedicalclinic.com",
+      "logo": "https://labellemedicalclinic.com/images/full-black-small-50ed2d80e0dc20367c1677d226e7aecb677016702edb7f2a577f5ddc7337816b.png",
+      "image": "https://labellemedicalclinic.com/images/686bc870fc98b09e4ae01b7d_optimized_1920.jpg",
+      "description": "Nurse Practitioner-owned medical aesthetic clinic offering Botox, dermal fillers, laser treatments, microneedling, and luxury skin care in Quispamsis, NB.",
+      "telephone": "+1-506-849-0271",
+      "email": "Labellemedclinic@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "208 Hampton Rd",
+        "addressLocality": "Quispamsis",
+        "addressRegion": "NB",
+        "postalCode": "E2E 4L8",
+        "addressCountry": "CA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 45.4307,
+        "longitude": -65.9845
+      },
+      "areaServed": [
+        "Quispamsis, NB",
+        "Saint John, NB",
+        "Hampton, NB",
+        "Sussex, NB",
+        "Fredericton, NB"
+      ],
+      "sameAs": [
+        "https://www.facebook.com/La.Belle.Medical.Aesthetic",
+        "https://www.instagram.com/labellemedicalclinic/"
+      ],
+      "hasMap": "https://maps.google.com/?q=208+Hampton+Rd,+Quispamsis,+NB",
+      "priceRange": "$$",
+      "medicalSpecialty": "Dermatology",
+      "availableService": [
+        {"@type": "MedicalTherapy", "name": "Botox® and Dysport® Injections"},
+        {"@type": "MedicalTherapy", "name": "Dermal Fillers"},
+        {"@type": "MedicalTherapy", "name": "Laser Hair Removal"},
+        {"@type": "MedicalTherapy", "name": "Medical Microneedling"},
+        {"@type": "MedicalTherapy", "name": "Platelet Rich Plasma (PRP)"},
+        {"@type": "MedicalTherapy", "name": "Sclerotherapy"}
+      ]
+    }
+  </script>
+</head>
+
+<body>
+  <Header transparent={transparentHeader} />
+  <main id="main-content">
+    <slot />
+  </main>
+  <Footer />
+
+  <!-- Scroll reveal -->
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -60px 0px' }
+    );
+    document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
