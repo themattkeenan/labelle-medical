@@ -29,8 +29,14 @@ const year = new Date().getFullYear();
         <!-- Brand column -->
         <div class="footer__brand">
           <a href="/" class="footer__logo" aria-label="La Belle Medical Aesthetic Clinic">
-            <span class="footer__logo-main">La Belle</span>
-            <span class="footer__logo-sub">Medical Aesthetic Clinic</span>
+            <img
+              src="/images/668c47e0bb3c3a7e400c55d9_optimized_582.webp"
+              alt="La Belle Medical Aesthetic Clinic"
+              width="200"
+              height="122"
+              loading="lazy"
+              style="height:60px;width:auto;object-fit:contain;filter:brightness(0) invert(1);"
+            />
           </a>
           <p class="footer__tagline">
             Luxury skin treatments and medical aesthetics in Quispamsis, New Brunswick. Nurse Practitioner-owned, dedicated to your natural beauty.
@@ -130,27 +136,11 @@ const year = new Date().getFullYear();
 }
 
 .footer__logo {
-  display: flex;
-  flex-direction: column;
-  line-height: 1;
+  display: inline-block;
   margin-bottom: 1.5rem;
+  transition: opacity 0.3s ease;
 }
-.footer__logo-main {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2rem;
-  font-weight: 400;
-  letter-spacing: 0.06em;
-  color: var(--cream);
-}
-.footer__logo-sub {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 0.55rem;
-  font-weight: 600;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--rose);
-  margin-top: 3px;
-}
+.footer__logo:hover { opacity: 0.8; }
 
 .footer__tagline {
   font-family: 'Open Sans', sans-serif;

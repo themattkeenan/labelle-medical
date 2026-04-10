@@ -1,66 +1,264 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const team = [
+  {
+    name: 'DR. Erin Palmer',
+    credentials: 'BSC, MD, CCFP, FCFP',
+    role: 'Aesthetic Medicine Physician',
+    img: '/images/team-erin.webp',
+    bio: `Erin is a family physician with over a decade of experience caring for the Saint John, NB community. She completed a BSc with Honours (UNB) and earned her medical doctorate (MD) at Dalhousie University. She went on to complete her residency in Family Medicine (CCFP) at Dalhousie and is now a Fellow of the College of Family Physicians of Canada (FCFP). Her career in family medicine has included office practice, home visits, hospital medicine, and newborn care. She is also an assistant professor with Dalhousie University, participating in teaching residents and research.
+
+Erin has always been passionate about dermatology which naturally led her to pursue further training in aesthetic medicine. Her training includes Basic and Advanced Injectable certification through CAMA, Sclerotherapy certification through CBAM, Therapeutic Neuromodulators through THMA, Laser and Aesthetic Skin therapy through Harvard University, and Advanced injection techniques through Master Injector.
+
+Aesthetic medicine is now her full-time practice. Patients appreciate Erin's medical expertise, honest and forthcoming advice, and commitment to achieving natural-looking results that help them age with confidence.`,
+    outside: 'Outside of her professional life, Erin is a mom of two young boys and enjoys hiking, mountain biking, illustrating, photography and fashion.',
+  },
+  {
+    name: 'Bailey Sherwood',
+    credentials: 'LPN',
+    role: 'Licensed Practical Nurse & Laser Specialist',
+    img: '/images/team-member-3.webp',
+    bio: `Bailey Sherwood is a Licensed Practical Nurse with a background in neuroscience and critical care, bringing a strong foundation of clinical expertise and patient-focused care to her role in medical aesthetics.
+
+At La Belle Medical Aesthetic Clinic, Bailey specializes in advanced laser treatments, Microneedling with PRP, and neuromodulator injections. Working under the guidance of our Medical Director, she develops personalized treatment plans to address each patient's unique skin concerns. Known for her precise, conservative approach, Bailey ensures every treatment is both effective and comfortable, leaving patients feeling confident and refreshed.
+
+Bailey is deeply passionate about fostering strong patient relationships and guiding clients toward long-term skin health and rejuvenation.`,
+    outside: 'Outside the clinic, she enjoys travelling, spending quality time with friends and family, and relaxing with her beloved dog, Stella.',
+  },
+  {
+    name: 'Shelby Stevenson',
+    credentials: '',
+    role: 'Client Care Coordinator',
+    img: '/images/team-member-4.webp',
+    bio: `Shelby Stevenson brings a wealth of experience to her role as Client Care Coordinator at La Belle Clinic. With a long career as a hairstylist and salon owner, as well as experience operating a family business, Shelby understands the importance of personalized care and creating a welcoming atmosphere.
+
+In addition to her background in cosmetology, Shelby has recent experience in medical administration, enhancing her ability to provide informed guidance on aesthetic treatments and skincare. As a devoted mother to two sons, Shelby values family and brings a nurturing approach to her interactions with clients.`,
+    outside: 'She is dedicated to ensuring each client feels beautiful, confident, and well-informed about our services.',
+  },
+  {
+    name: 'Kate Cordingley',
+    credentials: '',
+    role: 'Certified Laser Technician & Medical Assistant',
+    img: '/images/668d6f1c2930f43a5f441554_optimized_931_c931x1395-0x0.jpg',
+    bio: `Kate Cordingley is a certified Laser Technician with advanced training in skin rejuvenation and medical aesthetic technology. Educated in Vancouver, BC, she brings over five years of hands-on experience to her role, along with multiple aesthetic certifications and a strong commitment to ongoing professional development alongside leading laser and skincare brands.
+
+Kate has also gained valuable clinical experience working as a laser technician within dermatology practices in both British Columbia and Ontario. At La Belle Medical Aesthetic Clinic, Kate specializes in Laser Hair Removal, Laser Facials, and RF Microneedling.`,
+    outside: 'Outside the clinic, Kate enjoys surfing, golfing with friends, practicing ballet, hiking, and travelling with her family.',
+  },
+  {
+    name: 'Amy Brothers',
+    credentials: '',
+    role: 'Licensed Aesthetician & Master Cosmetologist',
+    img: '/images/668d718d38669c905ff197f9_optimized_931_c931x1395-0x0.jpg',
+    bio: `Amy is a Licensed Aesthetician and Master Cosmetologist, and a 2003 graduate of Medes College, bringing over 23 years of experience in beauty and skin health. Her career has spanned elite spas, salons, and medical aesthetic clinics, and over the past decade she has focused primarily on advanced clinical skincare treatments.
+
+At La Belle Medical Aesthetic Clinic, Amy specializes in advanced facials, professional chemical peels, laser treatments, microneedling, RF microneedling, and medical-grade skincare. She is known for delivering highly personalized treatments that improve skin tone, texture, and overall skin health.
+
+Amy's philosophy is simple: honesty, thoroughness, and kindness.`,
+    outside: 'Outside the clinic, Amy enjoys tending to her garden, working on DIY projects, and meeting friends for brunch — with her senior dog Marshall and cat Boots.',
+  },
+  {
+    name: 'Laura Keenan',
+    credentials: '',
+    role: 'Clinic Manager',
+    img: '/images/6866d81ccd186242532d7d09_optimized_929_c929x1396-0x0.jpg',
+    bio: `Laura serves as Clinic Manager at La Belle Medical Aesthetic Clinic, overseeing the operational systems that support the clinic's high standard of patient care. With over a decade of leadership experience in healthcare risk management and the beauty industry, Laura brings a unique perspective that combines operational expertise with a focus on delivering an exceptional patient experience.
+
+At La Belle, Laura manages the behind-the-scenes operations that allow the clinical team to deliver exceptional care — from coordinating internal systems and workflows to overseeing product inventory and business operations. Known for her professionalism, organization, and attention to detail, Laura ensures both the operational and patient-facing aspects of the clinic run seamlessly every day.`,
+    outside: 'Outside the clinic, Laura is a devoted wife and mother of two daughters, and a passionate visual artist whose work was recently featured on a television series.',
+  },
+];
 ---
 
 <Layout
-  title="About Us — Nurse Practitioner-Owned Medical Aesthetics Clinic"
-  description="Learn about La Belle Medical Aesthetic Clinic — a Nurse Practitioner-owned luxury aesthetics clinic in Quispamsis, NB dedicated to natural, safe, personalized results."
+  title="About Us — Nurse Practitioner-Owned Medical Aesthetics | La Belle"
+  description="Meet the La Belle Medical Aesthetic Clinic team — led by Brittany Cameron NP, our Nurse Practitioner-founded clinic in Quispamsis, NB delivers safe, natural results with expert care."
 >
 
   <!-- Page Hero -->
   <section class="page-hero">
     <div class="page-hero__bg">
-      <img src="/images/668c49fc0c795ee329850b2a_optimized_1920.jpg" alt="La Belle clinic" loading="eager" fetchpriority="high" width="1920" height="700" />
+      <img src="/images/686bc870fc98b09e4ae01b7d_optimized_1920.jpg" alt="La Belle clinic" loading="eager" fetchpriority="high" width="1920" height="700" />
       <div class="page-hero__overlay"></div>
     </div>
-    <div class="container page-hero__content">
+    <div class="container page-hero__content text-center">
       <p class="eyebrow" style="color:var(--rose)">Our Story</p>
       <h1 style="color:var(--white)">About La Belle</h1>
       <div class="divider"></div>
-      <p style="color:rgba(255,255,255,0.8); max-width:52ch;">A Nurse Practitioner-owned clinic dedicated to enhancing your natural beauty through expert, personalized care.</p>
+      <p style="color:rgba(255,255,255,0.8); max-width:52ch; margin-inline:auto;">Everyone is unique, and so is your skin. We believe beauty treatments should enhance who you already are.</p>
     </div>
   </section>
 
-  <!-- Mission -->
+  <!-- About Intro -->
   <section class="section">
     <div class="container">
       <div class="about-split">
         <div class="about-split__image" data-reveal="left">
-          <img src="/images/668d6e3314180d551caab1ca_optimized_1396.jpg" alt="La Belle Medical Aesthetic Clinic" loading="lazy" width="700" height="900" />
+          <img
+            src="/images/668c49fc0c795ee329850b2a_optimized_1920.jpg"
+            alt="La Belle Medical Aesthetic Clinic"
+            loading="lazy"
+            width="700"
+            height="500"
+          />
           <div class="about-split__image-accent" aria-hidden="true"></div>
         </div>
         <div class="about-split__content">
           <p class="eyebrow" data-reveal="fade">Who We Are</p>
-          <h2 data-reveal data-delay="100">Luxury Aesthetics Grounded in Clinical Excellence</h2>
-          <div class="divider divider--left" data-reveal="fade" data-delay="200"></div>
+          <h2 data-reveal data-delay="100">Everyone is Unique,<br><em>So Is Your Skin</em></h2>
+          <div class="divider divider--left" data-reveal="fade" data-delay="150"></div>
           <p class="lead" data-reveal data-delay="200">
             At La Belle Medical Aesthetic Clinic, we offer luxury skin treatments and services that help you look and feel your best. Located in Quispamsis, New Brunswick, our clinic is Nurse Practitioner-owned, ensuring you receive exceptional care and attention to achieve safe and natural results.
           </p>
           <p data-reveal data-delay="300">
-            Our team is dedicated to working with you to determine the right services and treatments tailored to your specific goals. We take a collaborative approach — listening deeply, assessing thoroughly, and crafting personalized plans that respect both your beauty goals and your wellbeing.
+            Our team is dedicated to working with you to determine the right services and treatments tailored to your specific goals. We proudly offer a range of advanced treatments, including Botox® and Dysport® injections, dermal fillers such as Juvederm®, Revanesse®, and Restylane®, laser hair removal, microneedling, and Latisse® for eyelash growth.
           </p>
+          <p data-reveal data-delay="350">
+            We take a personalized approach to each client — working collaboratively to determine the best services and treatments that fit your unique wellness goals. With our expertise and commitment to excellence, we strive to help you achieve the radiant and healthy appearance you desire.
+          </p>
+          <div class="about-split__stats" data-reveal data-delay="400">
+            <div class="stat">
+              <span class="stat__num">2021</span>
+              <span class="stat__label">Founded</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num">NP</span>
+              <span class="stat__label">Owned & Operated</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num">22+</span>
+              <span class="stat__label">Services Offered</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       FOUNDER SPOTLIGHT
+  ══════════════════════════════════ -->
+  <section class="founder section" aria-labelledby="founder-heading">
+    <div class="founder__bg-shape" aria-hidden="true"></div>
+    <div class="container">
+      <div class="founder__grid">
+        <div class="founder__image-wrap" data-reveal="left">
+          <img
+            src="/images/team-brittany.webp"
+            alt="Brittany Cameron, Nurse Practitioner & Medical Director"
+            loading="lazy"
+            width="600"
+            height="800"
+          />
+          <div class="founder__image-badge" data-reveal="fade" data-delay="300">
+            <span>AestheticIntelligence<br>Fellowship Award</span>
+          </div>
+        </div>
+
+        <div class="founder__content">
+          <p class="eyebrow" data-reveal="fade">Meet Our Founder</p>
+          <h2 id="founder-heading" data-reveal data-delay="100">Brittany Cameron</h2>
+          <p class="founder__creds" data-reveal data-delay="150">BScN, MSN, NP &nbsp;·&nbsp; Aesthetic Medicine Nurse Practitioner &nbsp;·&nbsp; Medical Director</p>
+          <div class="divider divider--left" data-reveal="fade" data-delay="200"></div>
+
+          <p class="lead" data-reveal data-delay="200">
+            Brittany Cameron, the visionary behind La Belle Medical Aesthetic Clinic, blends professional excellence with heartfelt care. She opened La Belle in 2021, and since then the clinic has continued to grow and thrive as a trusted destination for luxury aesthetic care in the region.
+          </p>
+          <p data-reveal data-delay="250">
+            Her academic journey began with a Bachelor of Science in Nursing from St. Francis Xavier University in 2007, followed by a Master of Nursing – Nurse Practitioner degree from the University of New Brunswick in 2011. With more than 13 years as a Nurse Practitioner — including extensive experience in emergency and primary care — Brittany was among the first Nurse Practitioners trained in aesthetics in New Brunswick.
+          </p>
+          <p data-reveal data-delay="300">
+            Brittany completed an intensive fellowship with UK-based plastic surgeon Dr. Ayad Harb, earning the prestigious <strong>AestheticIntelligence Fellowship Award</strong>, regarded as the highest level of training in aesthetic medicine. She has also trained with Dr. Thuy Doan, Dr. Arthur Swift, and through THMA Consulting and the Swift Beauty Masterclass.
+          </p>
+
+          <div class="founder__highlights" data-reveal data-delay="350">
+            <div class="founder__highlight">
+              <span class="founder__highlight-icon">✦</span>
+              <p>13+ years as a Nurse Practitioner including emergency &amp; primary care</p>
+            </div>
+            <div class="founder__highlight">
+              <span class="founder__highlight-icon">✦</span>
+              <p>AestheticIntelligence Fellowship — highest level of training in aesthetic medicine</p>
+            </div>
+            <div class="founder__highlight">
+              <span class="founder__highlight-icon">✦</span>
+              <p>Trained Aesthetic Laser Safety Officer (Canadian Laser Safety certified)</p>
+            </div>
+            <div class="founder__highlight">
+              <span class="founder__highlight-icon">✦</span>
+              <p>Thousands of successful injection visits — full-face balance &amp; harmony approach</p>
+            </div>
+          </div>
+
           <p data-reveal data-delay="400">
-            We proudly offer a comprehensive range of advanced treatments, from Botox® and Dysport® to dermal fillers, laser hair removal, microneedling, Latisse®, sclerotherapy, and IV vitamin infusions. To complement our treatments, we carry premium medical-grade skincare lines including SkinCeuticals®, Vivier Skin, EltaMD, and more.
+            As Medical Director, Brittany plays a pivotal leadership role in supporting the clinical team and developing the clinic's signature evidence-based protocols. She utilizes Health Canada–approved technologies and ensures every procedure performed at La Belle aligns with the highest standards of safety, efficacy, and patient care.
+          </p>
+          <p data-reveal data-delay="450">
+            Outside of her professional achievements, Brittany is a devoted mother to her son and daughter, finding balance through family time and her lifelong interests in beauty and aesthetics.
           </p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ══════════════════════════════════
+       TEAM GRID
+  ══════════════════════════════════ -->
+  <section class="team section" aria-labelledby="team-heading" style="background:var(--cream-dark)">
+    <div class="container">
+      <div class="section-header text-center" data-reveal="fade">
+        <p class="eyebrow">The People Behind La Belle</p>
+        <h2 id="team-heading">Meet The Team</h2>
+        <div class="divider"></div>
+        <p class="lead">Our team of dedicated medical professionals brings both clinical expertise and a genuine passion for aesthetic artistry to every single appointment.</p>
+      </div>
+
+      <div class="team-grid">
+        {team.map((member, i) => (
+          <div class="team-card" data-reveal data-delay={String((i % 3 + 1) * 100)}>
+            <div class="team-card__image">
+              <img
+                src={member.img}
+                alt={member.name}
+                loading="lazy"
+                width="500"
+                height="650"
+              />
+            </div>
+            <div class="team-card__body">
+              <div class="team-card__header">
+                <h3 class="team-card__name">{member.name}</h3>
+                {member.credentials && <span class="team-card__creds">{member.credentials}</span>}
+                <p class="team-card__role">{member.role}</p>
+              </div>
+              <div class="team-card__bio">
+                {member.bio.split('\n\n').map(para => (
+                  <p>{para}</p>
+                ))}
+                {member.outside && <p class="team-card__outside"><em>{member.outside}</em></p>}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <!-- Values -->
-  <section class="values section" style="background:var(--cream-dark)">
+  <section class="values section">
     <div class="container">
       <div class="section-header text-center" data-reveal="fade">
         <p class="eyebrow">What Drives Us</p>
         <h2>Our Core Values</h2>
         <div class="divider"></div>
       </div>
-      <div class="values__grid">
+      <div class="values-grid">
         {[
           { icon: '⬡', title: 'Clinical Safety First', desc: 'Every treatment is administered with rigorous medical standards. As a Nurse Practitioner-owned clinic, safety is never an afterthought — it\'s our foundation.' },
           { icon: '◈', title: 'Natural Results', desc: 'We believe in enhancing what you already have — not transforming you into someone else. Our goal is always a refreshed, natural appearance.' },
           { icon: '◉', title: 'Personalized Care', desc: 'No two people are alike, and neither are their treatment plans. We take time to understand your unique skin, concerns, and aesthetic goals.' },
-          { icon: '◆', title: 'Ongoing Partnership', desc: 'Our relationship with clients doesn\'t end after treatment. We monitor your progress, adjust plans, and provide complimentary follow-ups.' },
+          { icon: '◆', title: 'Continuous Education', desc: 'Guided by evidence-based techniques and ongoing international training, we bring the most advanced, Health Canada–approved treatments to New Brunswick.' },
         ].map((v, i) => (
           <div class="value-card" data-reveal data-delay={String((i + 1) * 100)}>
             <div class="value-card__icon" aria-hidden="true">{v.icon}</div>
@@ -72,58 +270,23 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- Team -->
-  <section class="team section">
-    <div class="container">
-      <div class="section-header text-center" data-reveal="fade">
-        <p class="eyebrow">Meet the Team</p>
-        <h2>The La Belle Team</h2>
-        <div class="divider"></div>
-        <p class="lead">Our team of dedicated medical professionals brings both clinical expertise and a passion for aesthetic artistry to every appointment.</p>
-      </div>
-      <div class="team__grid">
-        <div class="team-card" data-reveal data-delay="100">
-          <div class="team-card__image">
-            <img src="/images/668d7a4f38669c905ff1afe1_optimized.jpg" alt="La Belle team member" loading="lazy" width="500" height="600" />
-          </div>
-          <div class="team-card__info">
-            <h3>La Belle Team</h3>
-            <p class="team-card__role">Nurse Practitioner & Founder</p>
-            <p>With advanced clinical training and a keen aesthetic eye, our team is dedicated to delivering treatments that are as safe as they are beautiful.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Areas Served -->
-  <section class="areas section" style="background:var(--charcoal)">
-    <div class="container text-center">
+  <section class="section text-center" style="background:var(--charcoal)">
+    <div class="container">
       <p class="eyebrow" style="color:var(--rose)" data-reveal="fade">Where We Serve</p>
       <h2 style="color:var(--cream)" data-reveal data-delay="100">Proudly Serving New Brunswick</h2>
-      <div class="divider" data-reveal="fade" data-delay="200"></div>
-      <div class="areas__list" data-reveal data-delay="300">
+      <div class="divider" data-reveal="fade" data-delay="150"></div>
+      <div class="areas-list" data-reveal data-delay="200">
         {['Quispamsis', 'Saint John', 'Hampton', 'Sussex', 'Fredericton'].map(city => (
           <span class="area-tag">{city}</span>
         ))}
       </div>
-      <p style="color:rgba(255,255,255,0.6); margin-top:2rem; font-size:0.9rem;" data-reveal data-delay="400">
-        Located at 208 Hampton Rd, Quispamsis — convenient for clients across New Brunswick.
+      <p style="color:rgba(255,255,255,0.55); margin-top:2rem; font-size:0.88rem;" data-reveal data-delay="300">
+        208 Hampton Rd, Quispamsis, NB &nbsp;·&nbsp; E2E 4L8
       </p>
-      <a href="/contact" class="btn btn--rose" style="margin-top:2.5rem" data-reveal data-delay="500">
-        Get Directions
+      <a href="https://labellemedicalclinic.janeapp.com/" target="_blank" rel="noopener" class="btn btn--rose" style="margin-top:2.5rem" data-reveal data-delay="400">
+        Book a Consultation
       </a>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="section text-center" style="background:var(--cream-dark)">
-    <div class="container">
-      <p class="eyebrow" data-reveal="fade">Ready to Begin?</p>
-      <h2 data-reveal data-delay="100">Start Your Beauty Journey Today</h2>
-      <div class="divider" data-reveal="fade" data-delay="200"></div>
-      <p class="lead" data-reveal data-delay="200">Book a consultation and let our team create a personalized treatment plan tailored just for you.</p>
-      <a href="https://labellemedicalclinic.janeapp.com/" target="_blank" rel="noopener" class="btn btn--primary" style="margin-top:2rem" data-reveal data-delay="300">Book a Consultation</a>
     </div>
   </section>
 
@@ -140,88 +303,209 @@ import Layout from '../layouts/Layout.astro';
 }
 .page-hero__bg { position: absolute; inset: 0; }
 .page-hero__bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
-.page-hero__overlay { position: absolute; inset: 0; background: rgba(17,17,17,0.6); }
+.page-hero__overlay { position: absolute; inset: 0; background: rgba(17,17,17,0.62); }
 .page-hero__content { position: relative; z-index: 1; padding-top: 80px; }
-.page-hero__content h1 { margin-bottom: 1rem; }
 
+/* About split */
 .about-split {
   display: grid;
-  grid-template-columns: 1fr 1.1fr;
+  grid-template-columns: 1fr 1.15fr;
   gap: clamp(3rem, 6vw, 6rem);
   align-items: center;
 }
 .about-split__image { position: relative; }
-.about-split__image img { width: 100%; height: auto; max-height: 700px; object-fit: cover; }
+.about-split__image img { width: 100%; height: auto; max-height: 580px; object-fit: cover; }
 .about-split__image-accent {
   position: absolute;
   inset: -1.5rem;
   border: 1px solid rgba(213,164,148,0.3);
   z-index: -1;
 }
-.about-split__content { display: flex; flex-direction: column; gap: 0; }
-.about-split__content h2 { margin-bottom: 0; }
-.about-split__content p + p { margin-top: 1.25rem; }
+.about-split__stats {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--cream-mid);
+  border-bottom: 1px solid var(--cream-mid);
+  margin: 2rem 0;
+}
+.stat__num { display:block; font-family:'Cormorant Garamond',serif; font-size:2.6rem; font-weight:300; color:var(--charcoal); line-height:1; }
+.stat__label { display:block; font-family:'Open Sans',sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--rose); margin-top:0.35rem; }
 
-.values__grid {
+/* Founder */
+.founder { position: relative; overflow: hidden; }
+.founder__bg-shape {
+  position: absolute;
+  top: 0; right: 0;
+  width: 45%;
+  height: 100%;
+  background: var(--cream-dark);
+  z-index: 0;
+  clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%);
+}
+.founder__grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: start;
+}
+.founder__image-wrap { position: relative; flex-shrink: 0; }
+.founder__image-wrap img { width: 100%; height: auto; max-height: 680px; object-fit: cover; object-position: top; box-shadow: var(--shadow-lg); }
+.founder__image-badge {
+  position: absolute;
+  bottom: -1.5rem;
+  right: -1.5rem;
+  background: var(--charcoal);
+  color: var(--cream);
+  padding: 1.25rem 1.5rem;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1.5;
+  text-align: center;
+  max-width: 160px;
+  border-top: 3px solid var(--rose);
+}
+.founder__creds {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--rose);
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
+}
+.founder__content { padding-top: 1rem; }
+.founder__content h2 { margin-bottom: 0.35rem; }
+.founder__content p { margin-top: 1rem; }
+.founder__content strong { color: var(--charcoal); font-weight: 700; }
+.founder__highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 1.75rem;
+  background: var(--cream-dark);
+  border-left: 3px solid var(--rose);
+  margin: 1.75rem 0;
+}
+.founder__highlight { display: flex; align-items: flex-start; gap: 0.75rem; }
+.founder__highlight-icon { color: var(--rose); font-size: 0.6rem; margin-top: 0.35rem; flex-shrink: 0; }
+.founder__highlight p { font-size: 0.88rem; color: var(--charcoal-mid); max-width: none; margin: 0; line-height: 1.6; }
+
+/* Team Grid */
+.team-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 3.5rem;
+}
+.team-card {
+  background: var(--cream);
+  border: 1px solid rgba(213,164,148,0.2);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.team-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
+.team-card__image { overflow: hidden; }
+.team-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.6s ease;
+}
+.team-card:hover .team-card__image img { transform: scale(1.04); }
+.team-card__body { padding: 1.75rem; display: flex; flex-direction: column; gap: 1rem; overflow: hidden; }
+.team-card__header { padding-bottom: 1rem; border-bottom: 1px solid rgba(213,164,148,0.2); }
+.team-card__name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--charcoal);
+  margin-bottom: 0.2rem;
+  line-height: 1.2;
+}
+.team-card__creds {
+  display: block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--charcoal-mid);
+  margin-bottom: 0.3rem;
+}
+.team-card__role {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--rose);
+}
+.team-card__bio { overflow: hidden; }
+.team-card__bio p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.82rem;
+  line-height: 1.75;
+  color: var(--charcoal-mid);
+  max-width: none;
+}
+.team-card__bio p + p { margin-top: 0.75rem; }
+.team-card__outside { color: var(--charcoal) !important; font-style: italic; }
+
+/* Values */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
   margin-top: 3rem;
 }
 .value-card {
-  background: var(--cream);
-  padding: 2.5rem;
+  background: var(--cream-dark);
+  padding: 2.5rem 1.75rem;
   border: 1px solid rgba(213,164,148,0.2);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 .value-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
-.value-card__icon { font-size: 2rem; color: var(--rose); margin-bottom: 1rem; }
-.value-card h3 { font-size: 1.4rem; margin-bottom: 0.75rem; }
-.value-card p { font-size: 0.9rem; color: var(--charcoal-mid); }
+.value-card__icon { font-size: 1.6rem; color: var(--rose); margin-bottom: 1rem; }
+.value-card h3 { font-size: 1.25rem; margin-bottom: 0.75rem; }
+.value-card p { font-size: 0.86rem; color: var(--charcoal-mid); line-height: 1.75; }
 
-.team__grid {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin-top: 3rem;
-}
-.team-card {
-  max-width: 500px;
-  background: var(--cream-dark);
-  border: 1px solid rgba(213,164,148,0.2);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.team-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
-.team-card__image { overflow: hidden; height: 400px; }
-.team-card__image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
-.team-card:hover .team-card__image img { transform: scale(1.05); }
-.team-card__info { padding: 2rem; }
-.team-card__info h3 { font-size: 1.5rem; margin-bottom: 0.25rem; }
-.team-card__role { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--rose); margin-bottom: 1rem; }
-.team-card__info p { font-size: 0.9rem; color: var(--charcoal-mid); }
-
-.areas__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 2rem;
-}
+/* Areas */
+.areas-list { display:flex; flex-wrap:wrap; justify-content:center; gap:1rem; margin-top:2rem; }
 .area-tag {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.3rem;
-  font-weight: 300;
-  color: rgba(255,255,255,0.7);
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.65);
   padding: 0.5rem 1.5rem;
-  border: 1px solid rgba(213,164,148,0.3);
+  border: 1px solid rgba(213,164,148,0.25);
   transition: all 0.3s ease;
 }
 .area-tag:hover { color: var(--cream); border-color: var(--rose); }
 
+/* Responsive */
+@media (max-width: 1100px) {
+  .values-grid { grid-template-columns: repeat(2, 1fr); }
+  .founder__grid { grid-template-columns: 340px 1fr; }
+}
 @media (max-width: 900px) {
   .about-split { grid-template-columns: 1fr; }
-  .values__grid { grid-template-columns: 1fr; }
+  .founder__grid { grid-template-columns: 1fr; }
+  .founder__bg-shape { display: none; }
+  .founder__image-badge { right: 1rem; }
+  .team-grid { grid-template-columns: 1fr; }
+  .team-card { grid-template-columns: 180px 1fr; }
+}
+@media (max-width: 600px) {
+  .values-grid { grid-template-columns: 1fr; }
+  .team-card { grid-template-columns: 1fr; }
+  .team-card__image { height: 280px; }
 }
 </style>

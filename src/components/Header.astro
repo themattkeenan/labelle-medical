@@ -34,8 +34,24 @@ const pathname = Astro.url.pathname;
 
     <!-- Logo -->
     <a href="/" class="logo" aria-label="La Belle Medical Aesthetic Clinic Home">
-      <span class="logo__text">La Belle</span>
-      <span class="logo__sub">Medical Aesthetic Clinic</span>
+      <img
+        class="logo__img logo__img--dark"
+        src="/images/668c47e0bb3c3a7e400c55d9_optimized_557.webp"
+        alt="La Belle Medical Aesthetic Clinic"
+        width="180"
+        height="111"
+        loading="eager"
+        fetchpriority="high"
+      />
+      <img
+        class="logo__img logo__img--light"
+        src="/images/668c47e0bb3c3a7e400c55d9_optimized_582.webp"
+        alt="La Belle Medical Aesthetic Clinic"
+        width="180"
+        height="111"
+        loading="eager"
+        fetchpriority="high"
+      />
     </a>
 
     <!-- Desktop Nav -->
@@ -141,33 +157,23 @@ const pathname = Astro.url.pathname;
 /* ── Logo ── */
 .logo {
   display: flex;
-  flex-direction: column;
-  line-height: 1;
+  align-items: center;
   flex-shrink: 0;
   transition: opacity 0.3s ease;
 }
-.logo:hover { opacity: 0.75; }
-.logo__text {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.65rem;
-  font-weight: 400;
-  letter-spacing: 0.06em;
-  color: var(--charcoal);
+.logo:hover { opacity: 0.82; }
+.logo__img {
+  height: 54px;
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
-.site-header--transparent:not(.scrolled) .logo__text,
-.site-header--transparent:not(.scrolled) .logo__sub {
-  color: var(--white);
-}
-.logo__sub {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 0.55rem;
-  font-weight: 600;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--rose);
-  margin-top: 2px;
-}
-.site-header--transparent:not(.scrolled) .logo__sub { color: rgba(255,255,255,0.75); }
+/* Dark logo shown by default (on light backgrounds) */
+.logo__img--dark  { display: block; }
+.logo__img--light { display: none; }
+/* On transparent hero header, show light logo */
+.site-header--transparent:not(.scrolled) .logo__img--dark  { display: none; }
+.site-header--transparent:not(.scrolled) .logo__img--light { display: block; }
 
 /* ── Desktop Nav ── */
 .nav { display: flex; }
