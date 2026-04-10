@@ -35,17 +35,8 @@ const pathname = Astro.url.pathname;
     <!-- Logo -->
     <a href="/" class="logo" aria-label="La Belle Medical Aesthetic Clinic Home">
       <img
-        class="logo__img logo__img--dark"
+        class="logo__img"
         src="/images/668c47e0bb3c3a7e400c55d9_optimized_557.webp"
-        alt="La Belle Medical Aesthetic Clinic"
-        width="180"
-        height="111"
-        loading="eager"
-        fetchpriority="high"
-      />
-      <img
-        class="logo__img logo__img--light"
-        src="/images/668c47e0bb3c3a7e400c55d9_optimized_582.webp"
         alt="La Belle Medical Aesthetic Clinic"
         width="180"
         height="111"
@@ -163,17 +154,18 @@ const pathname = Astro.url.pathname;
 }
 .logo:hover { opacity: 0.82; }
 .logo__img {
-  height: 54px;
+  height: 70px;
   width: auto;
   display: block;
   object-fit: contain;
+  /* Default: full colour dark logo on light header */
+  filter: none;
+  transition: filter 0.4s ease;
 }
-/* Dark logo shown by default (on light backgrounds) */
-.logo__img--dark  { display: block; }
-.logo__img--light { display: none; }
-/* On transparent hero header, show light logo */
-.site-header--transparent:not(.scrolled) .logo__img--dark  { display: none; }
-.site-header--transparent:not(.scrolled) .logo__img--light { display: block; }
+/* On transparent hero (before scroll): invert to white */
+.site-header--transparent:not(.scrolled) .logo__img {
+  filter: brightness(0) invert(1);
+}
 
 /* ── Desktop Nav ── */
 .nav { display: flex; }

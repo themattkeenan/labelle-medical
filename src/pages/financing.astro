@@ -1,0 +1,148 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Financing — La Belle Medical Aesthetic Clinic"
+  description="Flexible financing options for medical aesthetic treatments at La Belle in Quispamsis, NB. Make your treatments accessible with easy payment plans."
+>
+
+  <section class="page-hero">
+    <div class="page-hero__bg">
+      <img src="/images/668c49fc0c795ee329850b2a_optimized_1920.jpg" alt="Financing for aesthetic treatments" loading="eager" fetchpriority="high" width="1920" height="800" />
+      <div class="page-hero__overlay"></div>
+    </div>
+    <div class="container page-hero__content text-center">
+      <p class="eyebrow" style="color:var(--rose)">Accessible Beauty</p>
+      <h1 style="color:var(--white)">Financing Options</h1>
+      <div class="divider"></div>
+      <p style="color:rgba(255,255,255,0.8); max-width:52ch; margin-inline:auto;">
+        Exceptional skin shouldn't be out of reach. We offer flexible financing solutions to make your treatments accessible and affordable.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width:800px">
+      <div class="text-center" data-reveal="fade">
+        <p class="eyebrow">Payment Plans</p>
+        <h2>Invest in Your Confidence</h2>
+        <div class="divider"></div>
+        <p class="lead">
+          At La Belle, we believe everyone deserves to feel their best. We work with trusted financing partners to offer flexible payment plans that let you start your treatment journey now and pay over time.
+        </p>
+      </div>
+
+      <div class="financing-cards" data-reveal data-delay="100">
+        <div class="financing-card">
+          <div class="financing-card__icon" aria-hidden="true">✦</div>
+          <h3>Cherry Financing</h3>
+          <p>Apply in minutes with no hard credit check for pre-qualification. Choose a payment plan that works for your budget — from 3 to 24 months — with competitive rates and transparent terms.</p>
+          <a href="https://www.withcherry.com/" target="_blank" rel="noopener" class="btn btn--outline" style="margin-top:1.5rem">
+            Apply with Cherry
+          </a>
+        </div>
+        <div class="financing-card">
+          <div class="financing-card__icon" aria-hidden="true">✦</div>
+          <h3>In-House Payment Plans</h3>
+          <p>For certain treatment packages and memberships, we offer in-house instalment arrangements. Ask our team about available options during your consultation.</p>
+          <a href="/contact" class="btn btn--outline" style="margin-top:1.5rem">
+            Ask Us Today
+          </a>
+        </div>
+      </div>
+
+      <div class="financing-note" data-reveal data-delay="200">
+        <p>
+          <strong>Questions about financing?</strong> Our team is happy to walk you through your options during your consultation or by phone. Call us at <a href="tel:5068490271">506-849-0271</a> or <a href="/contact">send us a message</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--charcoal)">
+    <div class="container text-center">
+      <p class="eyebrow" style="color:var(--rose)" data-reveal="fade">Ready to Begin?</p>
+      <h2 style="color:var(--white)" data-reveal data-delay="100">Book Your Consultation</h2>
+      <div class="divider" data-reveal="fade" data-delay="200"></div>
+      <p style="color:rgba(255,255,255,0.7); max-width:50ch; margin-inline:auto" data-reveal data-delay="200">
+        Start with a personalized consultation — we'll recommend the best treatments for your goals and help you explore the most convenient payment approach.
+      </p>
+      <a href="https://labellemedicalclinic.janeapp.com/" target="_blank" rel="noopener" class="btn btn--primary" style="margin-top:2.5rem" data-reveal data-delay="300">
+        Book Online
+      </a>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+.page-hero {
+  position: relative;
+  height: 55vh;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+}
+.page-hero__bg { position: absolute; inset: 0; overflow: hidden; }
+.page-hero__bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
+.page-hero__overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.3) 100%);
+}
+.page-hero__content { position: relative; z-index: 1; }
+
+.financing-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 3.5rem;
+}
+.financing-card {
+  background: var(--cream-dark);
+  padding: 2.5rem 2rem;
+  border-bottom: 3px solid var(--rose);
+  display: flex;
+  flex-direction: column;
+}
+.financing-card__icon {
+  color: var(--rose);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.financing-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--charcoal);
+  margin-bottom: 0.75rem;
+}
+.financing-card p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.8;
+  color: var(--charcoal-mid);
+  flex: 1;
+}
+
+.financing-note {
+  margin-top: 3rem;
+  padding: 2rem;
+  border: 1px solid rgba(213,164,148,0.3);
+  background: var(--cream-dark);
+}
+.financing-note p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.8;
+  color: var(--charcoal-mid);
+  margin: 0;
+  text-align: center;
+}
+.financing-note a { color: var(--rose); }
+.financing-note a:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .financing-cards { grid-template-columns: 1fr; }
+}
+</style>

@@ -1,0 +1,1067 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const services = [
+  {
+    slug: 'botox-dysport',
+    title: 'Botox® & Dysport®',
+    tagline: 'Precision muscle relaxation for smooth, naturally refreshed results',
+    heroImg: '/images/668d7a4f927cf1a08b29000a_optimized_300_c300x450-0x0.jpg',
+    metaDesc: 'Expert Botox® and Dysport® injections in Quispamsis, NB. Reduce forehead lines, crow\'s feet, frown lines and more. Nurse Practitioner-administered. Book your consultation today.',
+    intro: 'Botox® and Dysport® are neuromodulator injections that temporarily relax the facial muscles responsible for dynamic wrinkles — the lines that appear with repeated movement like squinting, smiling, or frowning. At La Belle, every injection is precisely placed by our experienced team to soften wrinkles while preserving your natural expressions. The result is a fresher, more rested appearance — never frozen, always you.',
+    benefits: [
+      'Reduces crow\'s feet, forehead lines, frown lines (11s) and bunny lines',
+      'Results visible within 3–7 days, peak effect at 2 weeks',
+      'Lasts 3–4 months with regular maintenance',
+      'Preventative use slows the formation of deeper static lines over time',
+      'Can be used for brow lifting, lip flip, gummy smile correction and hyperhidrosis',
+      'Quick 15–30 minute treatment with no downtime',
+    ],
+    process: [
+      { step: 'Consultation', desc: 'We assess your facial anatomy, discuss your goals and identify the ideal placement points to achieve natural, balanced results.' },
+      { step: 'Treatment', desc: 'Ultra-fine needles deliver small amounts of the neuromodulator precisely into targeted muscles. Most clients describe a brief pinch — numbing cream is available if desired.' },
+      { step: 'Results', desc: 'You\'ll begin to see softening within 3–5 days. Full results appear at the 2-week mark. A follow-up is scheduled to ensure you\'re thrilled with the outcome.' },
+    ],
+    faqs: [
+      { q: 'What\'s the difference between Botox® and Dysport®?', a: 'Both are botulinum toxin type A neuromodulators with the same mechanism of action. Dysport® tends to diffuse slightly more and may show results a touch faster. We\'ll recommend the best option based on your treatment areas and goals.' },
+      { q: 'Will I still look like myself?', a: 'Absolutely. Our philosophy is natural enhancement — we aim to soften lines while preserving full expression and your unique features. We never over-treat.' },
+      { q: 'Is there any downtime?', a: 'There is no downtime. Some clients experience minor redness or pinpoint bruising at injection sites that resolves within hours to a day. You can return to normal activities immediately.' },
+      { q: 'How often do I need treatments?', a: 'Most clients return every 3–4 months. Over time, with consistent treatment, many find results last slightly longer as the muscles become trained to relax.' },
+    ],
+    related: ['dermal-fillers', 'skin-boosters', 'sculptra'],
+  },
+  {
+    slug: 'dermal-fillers',
+    title: 'Dermal Fillers',
+    tagline: 'Restore volume, sculpt contours, and rejuvenate your appearance',
+    heroImg: '/images/668d7a2c14180d551caad412_optimized_300_c300x450-0x0.jpg',
+    metaDesc: 'Dermal filler treatments in Quispamsis, NB using Juvederm®, Revanesse® and Restylane®. Lip enhancement, cheek augmentation, facial contouring and more. Book a consultation at La Belle.',
+    intro: 'As we age, we naturally lose facial volume — cheeks flatten, lips thin, and hollows appear under the eyes. Dermal fillers are injectable hyaluronic acid gels that restore this lost volume, smooth deep folds, and sculpt beautiful contours with immediate, beautiful results. At La Belle, we use premium Health Canada–approved products including Juvederm®, Revanesse®, and Restylane® to deliver results that are natural, refined, and harmonious with your features.',
+    benefits: [
+      'Immediate volumizing and contouring results with no surgery',
+      'Enhances lips, cheeks, jawline, chin and under-eye hollows',
+      'Softens deep nasolabial folds and marionette lines',
+      'Hyaluronic acid is naturally present in your body and fully reversible',
+      'Results last 12–18 months depending on product and area treated',
+      'Customized to your unique facial anatomy and aesthetic goals',
+    ],
+    process: [
+      { step: 'Facial Assessment', desc: 'We perform a thorough analysis of your facial proportions and discuss your goals. We use a conservative approach, focusing on harmony and balance rather than volume alone.' },
+      { step: 'Comfort & Preparation', desc: 'Topical numbing cream is applied to maximize your comfort. Most filler products also contain lidocaine for an even more comfortable experience during injection.' },
+      { step: 'Injection & Sculpting', desc: 'Filler is carefully injected using fine needles or blunt-tipped cannulas depending on the treatment area, then sculpted and massaged to create smooth, natural-looking results.' },
+      { step: 'Aftercare Review', desc: 'We review post-care instructions and schedule a 2-week follow-up to assess results and make any desired refinements.' },
+    ],
+    faqs: [
+      { q: 'How long do fillers last?', a: 'Results typically last 12–18 months, depending on the specific product used, the treatment area, and individual metabolism. Lip filler tends to metabolize faster than cheek filler.' },
+      { q: 'Can filler be reversed?', a: 'Yes. Hyaluronic acid fillers can be dissolved quickly and safely with hyaluronidase if needed, giving you complete peace of mind.' },
+      { q: 'Does it hurt?', a: 'Topical numbing cream is applied before treatment and most fillers contain lidocaine. Discomfort is minimal — most clients describe a slight pressure or pinch.' },
+      { q: 'How much filler will I need?', a: 'This varies widely by individual. During your consultation we\'ll discuss realistic expectations and develop a treatment plan that suits your goals and budget. We always recommend starting conservatively.' },
+    ],
+    related: ['botox-dysport', 'sculptra', 'skin-boosters'],
+  },
+  {
+    slug: 'sculptra',
+    title: 'Sculptra®',
+    tagline: 'Gradual, natural collagen stimulation for lasting facial rejuvenation',
+    heroImg: '/images/67b617a395c836c5b5e1de2e_optimized_340_c340x340-0x0.jpg',
+    metaDesc: 'Sculptra® collagen stimulator treatments in Quispamsis, NB. Restore facial volume gradually and naturally. Results last up to 2 years. Book your consultation at La Belle Medical.',
+    intro: 'Sculptra® is not a traditional filler — it\'s a collagen stimulator. Made from poly-L-lactic acid (PLLA), Sculptra® works by triggering your body\'s own collagen production over time, restoring facial volume gradually and naturally. The results look completely authentic because they are authentically yours. Treatment typically involves 2–3 sessions spread over a few months, with results that can last up to two years or more.',
+    benefits: [
+      'Stimulates natural collagen production — results are your own tissue',
+      'Progressive, natural-looking improvement over 3–6 months',
+      'Exceptional longevity — results last up to 2 years',
+      'Ideal for restoring volume to cheeks, temples and jawline',
+      'Subtle, gradual change that looks completely natural',
+      'Full-face rejuvenation with less product than traditional fillers',
+    ],
+    process: [
+      { step: 'Consultation & Planning', desc: 'We assess your volume loss patterns and discuss a treatment schedule. Sculptra® typically requires 2–3 sessions spaced 4–6 weeks apart for optimal results.' },
+      { step: 'Preparation', desc: 'The product is diluted and prepared in advance for optimal consistency. Topical numbing cream and ice are used to maximize comfort during the procedure.' },
+      { step: 'Injection', desc: 'Sculptra® is injected into the deep dermis and subcutaneous layers using a diluted preparation. The treatment area is massaged thoroughly afterward — and you\'ll continue massage at home for 5 days.' },
+      { step: 'Collagen Build', desc: 'Improvement develops gradually over 2–3 months as your body builds new collagen. Final results are visible at about 6 months and can last well beyond 2 years.' },
+    ],
+    faqs: [
+      { q: 'How is Sculptra® different from regular fillers?', a: 'Traditional fillers provide immediate volume by physically filling space with gel. Sculptra® works differently — it stimulates your own collagen over time, creating results that look entirely natural and last significantly longer.' },
+      { q: 'When will I see results?', a: 'Initial swelling from the injections will resolve within a few days, and you won\'t see the final collagen-building effects for 2–3 months. The gradual change means no one will be able to pinpoint when you had "something done."' },
+      { q: 'Is the massage after treatment really necessary?', a: 'Yes, the 5-5-5 massage rule (5 minutes, 5 times a day, for 5 days) is important to ensure even distribution and reduce the risk of nodule formation. We\'ll show you the exact technique.' },
+      { q: 'Am I a good candidate?', a: 'Sculptra® is ideal for patients with moderate to significant volume loss who want long-lasting, natural-looking rejuvenation. It\'s an excellent choice for those who want gradual improvement rather than an immediate change.' },
+    ],
+    related: ['dermal-fillers', 'skin-boosters', 'botox-dysport'],
+  },
+  {
+    slug: 'skin-boosters',
+    title: 'Skin Boosters',
+    tagline: 'Deep hydration and luminosity from within — the glass-skin effect',
+    heroImg: '/images/67b610adb83461d67ed5a14a_optimized_424_c424x423-0x0.jpg',
+    metaDesc: 'Skin booster injections in Quispamsis, NB. Hyaluronic acid microinjections for deep hydration, improved elasticity and a radiant glow. Book at La Belle Medical Aesthetic Clinic.',
+    intro: 'Skin boosters deliver hyaluronic acid through a series of microinjections directly into the dermis — deeply hydrating the skin from the inside out. Unlike traditional fillers that volumize or lift, skin boosters improve the quality of your skin itself: texture becomes smoother, fine lines soften, and the complexion takes on a luminous, dewy radiance. Think of it as a deeply nourishing treatment for the skin itself, not just its surface.',
+    benefits: [
+      'Intense hydration that improves skin quality at a cellular level',
+      'Softens fine lines and crepey texture',
+      'Improves elasticity and skin firmness',
+      'Creates a radiant, glass-skin glow',
+      'Excellent for face, neck, décolletage and hands',
+      'Suitable for all skin types, including sensitive skin',
+    ],
+    process: [
+      { step: 'Assessment', desc: 'We assess your skin\'s hydration levels, texture concerns and overall skin quality to select the right skin booster product and technique for your goals.' },
+      { step: 'Numbing & Prep', desc: 'Topical numbing cream is applied for 20–30 minutes before treatment to ensure a comfortable experience throughout.' },
+      { step: 'Microinjections', desc: 'Using a specialized injection technique, hyaluronic acid is delivered in small deposits across the treatment area. Sessions take approximately 30–45 minutes.' },
+      { step: 'Glow Builds', desc: 'You\'ll notice immediate plumping and glow. Results continue to improve over 4–6 weeks as the HA integrates and stimulates natural hydration. A series of 2–3 treatments is recommended.' },
+    ],
+    faqs: [
+      { q: 'How are skin boosters different from fillers?', a: 'Fillers add structural volume and shape. Skin boosters are injected superficially in tiny amounts across a large area to hydrate and improve skin quality — not to change shape or volume.' },
+      { q: 'Which products do you use?', a: 'We offer several premium skin booster options. During your consultation, we\'ll recommend the best product based on your skin type and goals.' },
+      { q: 'How many treatments do I need?', a: 'We typically recommend an initial series of 2–3 sessions spaced 4 weeks apart, followed by maintenance sessions every 6–12 months.' },
+      { q: 'Is there downtime?', a: 'Small bumps from the injection deposits are normal and resolve within 12–24 hours. Some minor bruising is possible. Most clients return to their normal routine immediately.' },
+    ],
+    related: ['dermal-fillers', 'vamp', 'botox-dysport'],
+  },
+  {
+    slug: 'vamp',
+    title: 'VAMP by Prollenium',
+    tagline: 'Advanced bio-revitalization for cellular-level skin transformation',
+    heroImg: '/images/668d759a38669c905ff1a482_optimized_816_c816x811-0x0.jpg',
+    metaDesc: 'VAMP by Prollenium bio-revitalization treatment in Quispamsis, NB. Advanced hyaluronic acid with amino acids and antioxidants for deep skin nourishment. Book at La Belle Medical.',
+    intro: 'VAMP by Prollenium is an advanced bio-revitalization injectable that combines hyaluronic acid with a rich complex of amino acids, vitamins, and antioxidants. This powerful combination nourishes, hydrates, and rejuvenates skin at a cellular level — improving overall skin health rather than just surface appearance. VAMP is particularly effective for skin that has been affected by sun damage, stress, or the natural aging process, delivering visible improvements in radiance, tone, and texture.',
+    benefits: [
+      'Combines hyaluronic acid with amino acids, vitamins and antioxidants',
+      'Cellular-level nourishment and repair',
+      'Significant improvement in radiance and skin tone evenness',
+      'Reduces fine lines and improves texture',
+      'Antioxidant protection against environmental damage',
+      'Suitable for face, neck, décolletage and hands',
+    ],
+    process: [
+      { step: 'Skin Analysis', desc: 'We evaluate your skin\'s condition, concerns and goals to determine if VAMP is the right treatment — or whether it should be combined with other modalities for optimal results.' },
+      { step: 'Preparation', desc: 'Topical anesthetic is applied for maximum comfort. The VAMP solution is prepared for immediate injection.' },
+      { step: 'Treatment', desc: 'VAMP is administered through a series of microinjections across the treatment area. The procedure takes approximately 30–45 minutes.' },
+      { step: 'Ongoing Improvement', desc: 'Skin continues to improve for 4–8 weeks post-treatment as the active ingredients work at a cellular level. Most clients complete a series of 3 treatments for best results.' },
+    ],
+    faqs: [
+      { q: 'What makes VAMP different from standard skin boosters?', a: 'While traditional skin boosters contain only hyaluronic acid, VAMP includes a biorevitalizing complex with amino acids, coenzymes, and antioxidants for more comprehensive skin health benefits.' },
+      { q: 'Who is the ideal candidate?', a: 'VAMP is excellent for anyone experiencing dull, dehydrated or uneven skin tone, fine lines, or skin that appears fatigued. It\'s also a great preventative treatment for younger patients.' },
+      { q: 'Can VAMP be combined with other treatments?', a: 'Absolutely. VAMP pairs beautifully with neuromodulators, fillers, or laser treatments for comprehensive rejuvenation results.' },
+    ],
+    related: ['skin-boosters', 'dermal-fillers', 'microneedling'],
+  },
+  {
+    slug: 'laser-treatments',
+    title: 'Laser Treatments',
+    tagline: 'Medical-grade precision targeting for hair, pigmentation and vascular concerns',
+    heroImg: '/images/668d70ef927cf1a08b28e7e4_optimized_1395_c1395x931-0x0.jpg',
+    metaDesc: 'Medical-grade laser treatments in Quispamsis, NB. Laser hair removal, pigmentation, sun spots, redness and rosacea treatment. Book at La Belle Medical Aesthetic Clinic.',
+    intro: 'Our medical-grade laser systems deliver precise, targeted energy to address a wide range of skin concerns — from unwanted hair to stubborn pigmentation, sun damage, redness, and vascular lesions. Every laser treatment is customized to your skin type, concern, and desired outcome, ensuring both safety and results. Our equipment is regularly updated to offer the most current and effective technology available.',
+    benefits: [
+      'Permanent hair reduction across the body',
+      'Effectively treats sun spots, age spots and uneven pigmentation',
+      'Reduces redness, flushing and visible blood vessels',
+      'Improves skin texture and pore appearance',
+      'Medical-grade technology for all skin types',
+      'Minimal downtime with visible improvement after each session',
+    ],
+    process: [
+      { step: 'Consultation & Patch Test', desc: 'We assess your skin type, Fitzpatrick scale, and specific concerns. A patch test is performed before treatment to confirm the ideal settings for your skin.' },
+      { step: 'Pre-Treatment Prep', desc: 'Depending on the treatment, we may apply topical anesthetic. Protective eyewear is provided. The treatment area is cleansed and prepped.' },
+      { step: 'Laser Treatment', desc: 'Targeted laser energy is delivered to the treatment area. You\'ll feel a snapping or warmth sensation. Treatment time varies from 15 minutes to an hour depending on the area.' },
+      { step: 'Post-Care', desc: 'We apply soothing products and review aftercare. Sun protection is essential. A series of sessions is typically recommended for optimal results.' },
+    ],
+    faqs: [
+      { q: 'How many sessions are needed for laser hair removal?', a: 'Most clients require 6–8 sessions spaced 4–8 weeks apart (depending on the body area) to achieve permanent hair reduction. Maintenance treatments may be needed annually.' },
+      { q: 'Can all skin types be treated?', a: 'We offer solutions for a range of skin tones. During your consultation, we\'ll determine the safest and most effective settings for your specific skin type.' },
+      { q: 'Is there downtime?', a: 'Downtime depends on the specific laser treatment. Laser hair removal and vascular treatments generally have no downtime. Pigmentation treatments may involve 5–7 days of social downtime while treated spots darken and flake off.' },
+      { q: 'When will I see results?', a: 'This varies by treatment. Hair reduction is progressive with each session. Pigmentation and vascular improvements are often visible within 2 weeks of treatment.' },
+    ],
+    related: ['laser-facials', 'potenza', 'chemical-peels'],
+  },
+  {
+    slug: 'laser-facials',
+    title: 'Laser Facials',
+    tagline: 'Full-spectrum skin resurfacing for tone, texture and radiance',
+    heroImg: '/images/668d718d38669c905ff197f9_optimized_931_c931x1395-0x0.jpg',
+    metaDesc: 'Laser facial treatments in Quispamsis, NB. Improve skin tone, texture and radiance. Targets fine lines, enlarged pores and pigmentation. Book at La Belle Medical Aesthetic Clinic.',
+    intro: 'A laser facial is a comprehensive skin treatment that uses targeted laser energy to improve overall skin tone, clarity and texture. It addresses multiple concerns simultaneously — fine lines, enlarged pores, uneven pigmentation, mild sun damage, and dullness — delivering a dramatically smoother, more radiant complexion. La Belle\'s laser facials are customized to your skin\'s specific needs for a truly bespoke treatment experience.',
+    benefits: [
+      'Comprehensive improvement in overall skin tone and texture',
+      'Targets fine lines, pores, pigmentation and dullness simultaneously',
+      'Stimulates collagen production for long-term skin health',
+      'Dramatically improves radiance and skin clarity',
+      'Customized intensity for all skin types and concerns',
+      'Progressive improvement with each treatment',
+    ],
+    process: [
+      { step: 'Skin Analysis', desc: 'A thorough assessment of your skin determines the ideal laser settings and treatment parameters for your specific concerns and downtime preference.' },
+      { step: 'Prep & Comfort', desc: 'Topical numbing cream is applied. A cooling gel may also be used during treatment to keep the skin comfortable and protected.' },
+      { step: 'Treatment', desc: 'Laser energy is delivered systematically across the entire face. You\'ll feel warmth and a mild snapping sensation. Treatment takes 30–60 minutes.' },
+      { step: 'Recovery & Results', desc: 'Expect redness and mild swelling for 1–3 days. Skin continues to refine and glow for several weeks post-treatment. A series of 3–5 sessions is typically recommended for transformative results.' },
+    ],
+    faqs: [
+      { q: 'What does a laser facial treat?', a: 'Laser facials target fine lines and wrinkles, uneven skin tone, sun damage, mild pigmentation, enlarged pores and overall skin dullness for a full-spectrum skin rejuvenation effect.' },
+      { q: 'How much downtime should I expect?', a: 'Downtime varies depending on the intensity of treatment chosen. Light laser facials have minimal downtime (redness for 1 day). Medium-depth treatments may involve 3–5 days of peeling and redness.' },
+      { q: 'How many treatments will I need?', a: 'Most clients see significant improvement in 3–5 treatments spaced 4–6 weeks apart. Your practitioner will create a treatment plan based on your goals.' },
+    ],
+    related: ['laser-treatments', 'potenza', 'microneedling'],
+  },
+  {
+    slug: 'potenza',
+    title: 'Potenza by Cynosure',
+    tagline: 'Next-generation RF microneedling for total skin transformation',
+    heroImg: '/images/6866d8b823379be9c1e4bf4d_optimized_1398_c1398x930-0x0.jpg',
+    metaDesc: 'Potenza RF microneedling by Cynosure in Quispamsis, NB. Advanced radiofrequency microneedling for skin tightening, collagen induction and texture improvement. Book at La Belle.',
+    intro: 'Potenza by Cynosure is the most advanced RF microneedling platform available, delivering radiofrequency energy precisely into the skin via ultra-fine needles. This dual action — microneedling + RF energy — triggers powerful collagen and elastin production deep within the skin, resulting in significant tightening, smoothing, and overall rejuvenation. Potenza can be customized for virtually any skin concern and any skin type, with multiple tip configurations and depths available.',
+    benefits: [
+      'Combines microneedling and radiofrequency for amplified results',
+      'Significant skin tightening and lifting effect',
+      'Dramatically improves texture, pore size and scarring',
+      'Stimulates deep collagen and elastin remodeling',
+      'Suitable for all skin types including darker tones (unlike laser)',
+      'Minimal downtime with progressive improvement over 3–6 months',
+    ],
+    process: [
+      { step: 'Consultation', desc: 'We assess your skin concerns and goals, and develop a customized treatment plan including the appropriate tip configuration, depth and RF energy level for your skin.' },
+      { step: 'Numbing', desc: 'A topical numbing cream is applied for 30–45 minutes to ensure a comfortable treatment experience throughout the procedure.' },
+      { step: 'RF Microneedling', desc: 'The Potenza handpiece is glided across treatment areas, delivering precise radiofrequency energy at controlled depths. Treatment takes 45–90 minutes depending on the area.' },
+      { step: 'Recovery & Collagen Build', desc: 'Expect redness and mild swelling for 24–48 hours. Skin looks refreshed within a week and continues to improve for 3–6 months as new collagen forms. 2–3 treatments are recommended for optimal results.' },
+    ],
+    faqs: [
+      { q: 'What makes Potenza different from regular microneedling?', a: 'Regular microneedling uses needle injury alone to stimulate collagen. Potenza also delivers radiofrequency energy deep into the dermis, creating significantly more tissue remodeling for tighter, smoother, more dramatic results.' },
+      { q: 'Is it safe for darker skin tones?', a: 'Yes — because Potenza delivers energy through needles rather than on the surface, it doesn\'t cause thermal damage to melanin and is safe for all Fitzpatrick skin types.' },
+      { q: 'When will I see results?', a: 'You\'ll see initial improvement within 1–2 weeks, with continued improvement for up to 6 months as collagen remodeling continues. Results are long-lasting.' },
+      { q: 'Can it be combined with other treatments?', a: 'Potenza pairs excellently with PRP (injected after needling), skin boosters, or neuromodulators for a comprehensive rejuvenation approach.' },
+    ],
+    related: ['microneedling', 'prp', 'laser-facials'],
+  },
+  {
+    slug: 'microneedling',
+    title: 'Medical Microneedling',
+    tagline: 'Precision collagen induction for smoother, firmer, more youthful skin',
+    heroImg: '/images/6866d81ccd186242532d7d09_optimized_929_c929x1396-0x0.jpg',
+    metaDesc: 'Medical-grade SkinPen microneedling in Quispamsis, NB. Improve skin texture, reduce scarring and stimulate collagen. Book your treatment at La Belle Medical Aesthetic Clinic.',
+    intro: 'Medical microneedling with SkinPen — the first FDA-cleared microneedling device — creates thousands of controlled micro-channels in the skin that activate the body\'s natural healing cascade. The result: a flood of collagen and elastin production that dramatically improves skin texture, reduces acne scarring, shrinks pores, and restores a firmer, more youthful appearance. La Belle uses medical-grade equipment and sterile, single-use cartridges for every treatment.',
+    benefits: [
+      'Significantly reduces acne scars, surgical scars and stretch marks',
+      'Improves overall skin texture, pore size and tone',
+      'Stimulates natural collagen and elastin production',
+      'Reduces the appearance of fine lines and wrinkles',
+      'Safe for all skin types and tones',
+      'Enhances the absorption and efficacy of topical skincare',
+    ],
+    process: [
+      { step: 'Consultation', desc: 'We review your skin concerns, assess scar depth and texture irregularities, and determine the appropriate needle depth and number of sessions for your goals.' },
+      { step: 'Numbing', desc: 'Topical numbing cream is applied 30–45 minutes before treatment to ensure your comfort throughout the procedure.' },
+      { step: 'Microneedling', desc: 'The SkinPen device is moved systematically across the treatment area, creating precise micro-channels. Treatment takes 30–60 minutes. A serum is applied during and immediately after to maximize absorption.' },
+      { step: 'Recovery & Glow', desc: 'Expect redness similar to a mild sunburn for 24–48 hours. Skin enters its healing phase and improves progressively. A series of 3–6 treatments is recommended for significant improvement in scarring.' },
+    ],
+    faqs: [
+      { q: 'How many sessions do I need?', a: 'For general skin quality and texture, 3 sessions spaced 4–6 weeks apart is typical. For acne scarring, 4–6 sessions may be recommended. Individual results vary.' },
+      { q: 'Can microneedling help with acne scars?', a: 'Yes — microneedling is one of the most effective non-ablative treatments for atrophic (depressed) acne scars. It works by breaking down the fibrous scar tissue and stimulating new collagen to fill the indentation over time.' },
+      { q: 'Is there downtime?', a: 'Most clients have 24–48 hours of redness and mild sensitivity. Makeup can typically be applied the following day. You should avoid intense sun exposure for at least a week.' },
+      { q: 'Can I combine microneedling with PRP?', a: 'Absolutely — PRP (Platelet Rich Plasma) applied immediately after microneedling dramatically enhances results by flooding the micro-channels with growth factors. We often recommend this combination.' },
+    ],
+    related: ['prp', 'potenza', 'chemical-peels'],
+  },
+  {
+    slug: 'prp',
+    title: 'PRP Therapy',
+    tagline: 'Harness your body\'s own growth factors for accelerated rejuvenation',
+    heroImg: '/images/686bf4fa2fc1c8e963240faf_optimized_1024_c1024x1024-0x0.jpg',
+    metaDesc: 'PRP Platelet Rich Plasma therapy in Quispamsis, NB. Skin rejuvenation, hair restoration and healing support using your body\'s own growth factors. Book at La Belle Medical.',
+    intro: 'Platelet Rich Plasma (PRP) therapy uses your body\'s own biology to accelerate healing and rejuvenation. A small amount of blood is drawn, then processed to concentrate the platelets — which are rich in growth factors that stimulate collagen production, tissue repair, and cellular regeneration. PRP is used at La Belle for skin rejuvenation (often paired with microneedling), and hair restoration for thinning hair and alopecia.',
+    benefits: [
+      'Uses your own biology — no foreign substances',
+      'Accelerates collagen and elastin production',
+      'Dramatically enhances microneedling and other treatment results',
+      'Improves hair density and reduces hair loss',
+      'Improves skin quality, tone and radiance',
+      'Very low risk of allergic reaction (autologous treatment)',
+    ],
+    process: [
+      { step: 'Blood Draw', desc: 'A small amount of blood (similar to a routine blood test) is drawn from your arm. The process takes only a few minutes.' },
+      { step: 'Centrifuge Processing', desc: 'Your blood is placed in a medical centrifuge that spins at high speed to separate the platelet-rich plasma from red blood cells, concentrating the growth factors.' },
+      { step: 'Application', desc: 'For skin rejuvenation, PRP is applied topically during microneedling or injected directly into the skin. For hair restoration, it\'s injected into the scalp at the level of the hair follicles.' },
+      { step: 'Progressive Results', desc: 'Growth factors stimulate ongoing tissue regeneration for weeks after treatment. A series of 3 sessions spaced 4–6 weeks apart is typically recommended for optimal results.' },
+    ],
+    faqs: [
+      { q: 'Is PRP safe?', a: 'PRP is extremely safe because it uses your own blood. There is minimal risk of allergic reaction or rejection. All collection and processing is done with sterile, single-use equipment.' },
+      { q: 'How does PRP help with hair loss?', a: 'Growth factors in PRP stimulate dormant hair follicles, prolong the growth phase of the hair cycle, and increase blood supply to the follicle — resulting in thicker, healthier hair growth over several months.' },
+      { q: 'How many PRP sessions are needed?', a: 'We typically recommend 3 initial sessions spaced 4–6 weeks apart, followed by maintenance sessions every 6–12 months to sustain results.' },
+      { q: 'Can PRP be combined with other treatments?', a: 'Yes — PRP combined with microneedling is one of our most popular and effective combinations for skin rejuvenation. It can also be used alongside other hair restoration approaches.' },
+    ],
+    related: ['microneedling', 'potenza', 'skin-boosters'],
+  },
+  {
+    slug: 'chemical-peels',
+    title: 'Medical Grade Chemical Peels',
+    tagline: 'Precision skin renewal for a clearer, brighter, more even complexion',
+    heroImg: '/images/6866d83043cdf93d3f9a5f28_optimized_1019_c1019x1273-0x0.jpg',
+    metaDesc: 'Medical grade chemical peels in Quispamsis, NB. Customized peels for acne, hyperpigmentation, sun damage and skin brightening. Book at La Belle Medical Aesthetic Clinic.',
+    intro: 'Medical-grade chemical peels use carefully selected acids to remove damaged surface cells and accelerate skin cell turnover, revealing fresher, clearer skin underneath. Unlike over-the-counter peels, our medical formulations penetrate deeper and are customized to your specific skin type and concern — from brightening superficial peels to deeper resurfacing treatments for sun damage, acne, and hyperpigmentation.',
+    benefits: [
+      'Dramatically improves skin clarity and brightness',
+      'Effectively addresses hyperpigmentation and melasma',
+      'Reduces acne breakouts and improves oily skin texture',
+      'Accelerates cell turnover for fresher, younger-looking skin',
+      'Customized to your skin type and concern level',
+      'Enhances the efficacy of your skincare routine post-treatment',
+    ],
+    process: [
+      { step: 'Consultation & Skin Analysis', desc: 'We assess your skin type, Fitzpatrick scale, active concerns and goals to select the ideal peel formulation and strength for your skin.' },
+      { step: 'Pre-Treatment Prep', desc: 'For some peels, we recommend pre-treating with specific skincare products for 2–4 weeks in advance to prime the skin and minimize risk of post-inflammatory hyperpigmentation.' },
+      { step: 'Peel Application', desc: 'The peel solution is applied in controlled layers. You\'ll feel tingling or mild stinging during application. Neutralizer is applied to stop the process at the ideal depth.' },
+      { step: 'Peeling & Reveal', desc: 'Depending on peel depth, you\'ll experience 2–7 days of flaking or peeling as old skin sheds. The reveal beneath is smoother, brighter and more refined. Multiple sessions are recommended for best results.' },
+    ],
+    faqs: [
+      { q: 'How deep are your chemical peels?', a: 'We offer peels from superficial (glycolic, lactic acid) to medium-depth (TCA-based). The appropriate depth is selected based on your skin concern, type, and downtime tolerance.' },
+      { q: 'Will I peel visibly?', a: 'This depends on the peel depth. Light peels may cause mild flaking over 2–3 days. Medium peels involve more noticeable peeling over 5–7 days. We\'ll set clear expectations during your consultation.' },
+      { q: 'Can chemical peels treat melasma?', a: 'Chemical peels can be very effective for melasma, especially when combined with a dedicated home skincare regimen using brightening and sun-protective products. Multiple sessions are typically required.' },
+      { q: 'How often can I get a chemical peel?', a: 'Light peels can be done monthly. Medium peels are typically spaced 6–8 weeks apart. Your practitioner will recommend the ideal schedule for your goals.' },
+    ],
+    related: ['microneedling', 'laser-treatments', 'laser-facials'],
+  },
+  {
+    slug: 'sclerotherapy',
+    title: 'Sclerotherapy',
+    tagline: 'Clinically proven spider vein elimination for smooth, clear skin',
+    heroImg: '/images/6866d7f443cdf93d3f9a5e18_optimized_1398_c1398x930-0x0.jpg',
+    metaDesc: 'Sclerotherapy spider vein treatment in Quispamsis, NB. Safe and effective elimination of spider veins and small varicose veins. Book at La Belle Medical Aesthetic Clinic.',
+    intro: 'Sclerotherapy is the gold-standard clinical treatment for spider veins and small varicose veins. A specialized sclerosing solution is injected directly into the targeted vessel, causing it to collapse and gradually fade over several weeks. The procedure is performed by our experienced nurse practitioners and is highly effective for veins on the legs, ankles, and other areas of the body.',
+    benefits: [
+      'Gold-standard, clinically proven vein treatment',
+      'Eliminates spider veins and small varicose veins',
+      'Minimal discomfort with very short needles',
+      'No general anesthesia or incisions required',
+      'Gradual, natural-looking disappearance of treated veins',
+      'Walk-in, walk-out procedure with no significant downtime',
+    ],
+    process: [
+      { step: 'Vein Assessment', desc: 'We map the veins to be treated and assess the pattern of feeding vessels to develop the most effective treatment plan.' },
+      { step: 'Injection', desc: 'A fine needle injects the sclerosing solution into each targeted vein. The solution irritates the vessel wall, causing it to swell, close, and eventually be reabsorbed by the body.' },
+      { step: 'Compression', desc: 'Compression stockings are worn for a specified period after treatment to support the healing process and optimize outcomes.' },
+      { step: 'Fading Over Weeks', desc: 'Treated veins gradually fade over 4–8 weeks. Multiple sessions may be needed for larger areas or more prominent vessels. Final results are visible at 3 months.' },
+    ],
+    faqs: [
+      { q: 'How many sessions will I need?', a: 'The number of sessions varies depending on the extent of the veins and how your body responds. Most clients require 2–4 sessions for satisfactory clearance, spaced 4–6 weeks apart.' },
+      { q: 'Does it hurt?', a: 'The injections are performed with very fine needles. Most clients describe a mild burning or stinging sensation during injection that resolves quickly. The procedure is well-tolerated.' },
+      { q: 'What are the restrictions after treatment?', a: 'You should avoid hot baths, saunas, strenuous exercise and prolonged sun exposure for 48 hours post-treatment. Compression stockings are worn as directed.' },
+      { q: 'Will the veins come back?', a: 'Treated veins are permanently eliminated. However, new spider veins can develop over time. Maintenance sessions may be recommended to address new vessels as they appear.' },
+    ],
+    related: ['laser-treatments', 'consultation'],
+  },
+  {
+    slug: 'latisse',
+    title: 'Latisse®',
+    tagline: 'FDA-approved prescription eyelash growth for longer, fuller, darker lashes',
+    heroImg: '/images/686bf1492fc1c8e9632400ac_optimized_1671_c1019x1273-438x333.jpg',
+    metaDesc: 'Latisse® prescription eyelash growth treatment in Quispamsis, NB. Grow longer, fuller, darker lashes in 16 weeks. Available from La Belle Medical Aesthetic Clinic.',
+    intro: 'Latisse® is the only FDA-approved prescription treatment for hypotrichosis — inadequate or not enough lashes. Applied nightly to the upper lash line with a sterile applicator, Latisse® works by extending the growth phase of the eyelash cycle, resulting in longer, fuller, and darker lashes over 12–16 weeks. At La Belle, Latisse® is prescribed and monitored by our nurse practitioners to ensure safe, effective use.',
+    benefits: [
+      'FDA-approved and Health Canada–approved for lash growth',
+      'Clinically proven to grow longer, fuller, darker lashes',
+      'Results visible in as little as 4 weeks; full results at 16 weeks',
+      'Eliminates the need for lash extensions, falsies or mascara',
+      'Prescription-strength treatment with professional monitoring',
+      'Maintains results with continued nightly use',
+    ],
+    process: [
+      { step: 'Prescription Consultation', desc: 'A brief consultation is conducted to confirm you are a suitable candidate for Latisse® and that there are no contraindications. A prescription is issued if appropriate.' },
+      { step: 'Application Instruction', desc: 'We provide detailed instructions on applying Latisse® correctly — one drop per applicator, applied nightly to the upper lash line only (never lower). Proper technique ensures safety and results.' },
+      { step: 'Consistent Nightly Use', desc: 'Latisse® is applied every evening as part of your nighttime routine. Consistency is key — skipping applications delays results.' },
+      { step: 'Progress & Maintenance', desc: 'Lashes begin to improve within 4 weeks. Full results are typically seen at 16 weeks. Continued use maintains results; discontinuation causes lashes to gradually return to their original appearance.' },
+    ],
+    faqs: [
+      { q: 'Is Latisse® safe?', a: 'When used as directed, Latisse® is very safe. The most common side effects include mild eye irritation, red eyes, and itchy eyelids in some users. A small number of users may experience increased iris pigmentation with long-term use.' },
+      { q: 'How long until I see results?', a: 'Most clients notice longer lashes within 4–6 weeks. The full effect — including length, thickness, and darkness — is typically achieved at 16 weeks of consistent nightly use.' },
+      { q: 'Can I use Latisse® if I wear contact lenses?', a: 'Yes, but contact lenses should be removed before application and can be reinserted 15 minutes afterward.' },
+      { q: 'What happens if I stop using it?', a: 'Lashes will gradually return to their previous appearance over several weeks to months if Latisse® is discontinued. To maintain results, continued use is recommended.' },
+    ],
+    related: ['consultation', 'botox-dysport', 'dermal-fillers'],
+  },
+  {
+    slug: 'visia-analysis',
+    title: 'Visia Skin Analysis',
+    tagline: 'Advanced skin imaging for precision treatment planning',
+    heroImg: '/images/668d71e838669c905ff19911_optimized_1140_c1140x1140-0x0.jpg',
+    metaDesc: 'Visia skin analysis at La Belle Medical Aesthetic Clinic in Quispamsis, NB. Advanced skin imaging technology revealing hidden concerns for data-driven treatment plans.',
+    intro: 'Visia complexion analysis is a sophisticated skin imaging system that captures multi-spectral photographs to reveal both surface and subsurface skin conditions not visible to the naked eye. It evaluates eight key skin parameters — spots, wrinkles, texture, pores, UV spots, brown spots, red areas, and porphyrins — and compares your results to a database of thousands of individuals your age and skin type. The result is a comprehensive, objective picture of your skin\'s health and a data-driven foundation for your personalized treatment plan.',
+    benefits: [
+      'Reveals hidden sun damage and subsurface pigmentation before it\'s visible',
+      'Quantifies skin concerns objectively for precise treatment planning',
+      'Tracks treatment progress with before-and-after comparisons',
+      'Identifies concerns specific to your skin not visible in a mirror',
+      'Educates and motivates with clear, visual data',
+      'Included complimentary with initial consultations at La Belle',
+    ],
+    process: [
+      { step: 'Image Capture', desc: 'You are seated in front of the Visia system and a series of multi-spectral images are captured from three angles under standardized lighting conditions. The process takes just 5 minutes.' },
+      { step: 'Analysis', desc: 'The system analyzes eight parameters and generates a comprehensive report including your percentile score compared to others of the same age and skin type.' },
+      { step: 'Review & Planning', desc: 'Your practitioner reviews the results with you, explaining each finding in clear terms and using the data to recommend the most effective treatments for your specific skin profile.' },
+    ],
+    faqs: [
+      { q: 'Is the Visia analysis painful or invasive?', a: 'Not at all — it\'s completely non-invasive. You simply sit in front of the system for a series of photographs. There is no contact with the skin.' },
+      { q: 'Is it included in my consultation?', a: 'Yes — Visia analysis is included as part of your initial consultation at La Belle. It helps us design the most targeted treatment plan possible for your skin.' },
+      { q: 'What are "porphyrins" in the Visia scan?', a: 'Porphyrins are metabolic byproducts produced by P. acnes bacteria in the pores. The Visia scan can detect their presence — often useful for identifying acne-prone areas before breakouts become visible.' },
+    ],
+    related: ['consultation', 'chemical-peels', 'laser-treatments'],
+  },
+  {
+    slug: 'lesion-removal',
+    title: 'Cosmetic Skin Lesion Removal',
+    tagline: 'Safe, effective removal of unwanted skin tags, milia and benign lesions',
+    heroImg: '/images/668d713cc42499da19880fec_optimized_1396_c1396x930-0x0.jpg',
+    metaDesc: 'Cosmetic skin lesion removal in Quispamsis, NB. Professional removal of skin tags, milia, moles and benign lesions. Book at La Belle Medical Aesthetic Clinic.',
+    intro: 'Unwanted benign skin lesions — skin tags, milia, sebaceous hyperplasia, DPN (dermatosis papulosa nigra), and small benign moles — can be safely and effectively removed using advanced clinical techniques. At La Belle, our nurse practitioners use the most appropriate method (radiofrequency, cryotherapy, or excision) based on the type and location of the lesion, ensuring clean removal with minimal scarring.',
+    benefits: [
+      'Removes skin tags, milia, DPN and sebaceous hyperplasia',
+      'Multiple techniques available for optimal results',
+      'Performed by experienced nurse practitioners',
+      'Minimal scarring with proper aftercare',
+      'Quick in-clinic procedure with minimal downtime',
+      'Immediate cosmetic improvement',
+    ],
+    process: [
+      { step: 'Assessment', desc: 'We evaluate the lesion(s) to confirm they are benign and appropriate for cosmetic removal. Any suspicious lesions are referred to a dermatologist for evaluation first.' },
+      { step: 'Anesthesia', desc: 'A small amount of local anesthetic is injected around the lesion for a completely pain-free treatment experience.' },
+      { step: 'Removal', desc: 'The lesion is removed using the most appropriate technique — radiofrequency cautery, cryotherapy, or excision with closure depending on the type, size and location.' },
+      { step: 'Aftercare', desc: 'Detailed aftercare instructions are provided. Healing time varies by technique and location, typically 1–2 weeks. Sun protection is essential for the treated area.' },
+    ],
+    faqs: [
+      { q: 'Can you remove any type of skin growth?', a: 'We remove benign cosmetic lesions including skin tags, milia, sebaceous hyperplasia, and small benign moles. Any lesion that appears atypical is referred to a dermatologist before removal.' },
+      { q: 'Will there be a scar?', a: 'The goal is always to minimize scarring. With proper technique and aftercare, most removals heal cleanly. Individual healing varies, and we\'ll discuss realistic expectations for each lesion.' },
+      { q: 'How many lesions can be removed in one appointment?', a: 'Multiple lesions can often be addressed in a single visit. We\'ll assess the total number, type and location during your consultation and plan accordingly.' },
+    ],
+    related: ['consultation', 'laser-treatments', 'chemical-peels'],
+  },
+  {
+    slug: 'consultation',
+    title: 'Skin Care Consultation',
+    tagline: 'Your personalized roadmap to your best skin ever',
+    heroImg: '/images/68751a2a45bbd1f01958dbef_optimized_930_c930x1396-0x0.jpg',
+    metaDesc: 'Skin care consultation at La Belle Medical Aesthetic Clinic in Quispamsis, NB. Personalized skin assessment, treatment planning and skincare regimen design. Book your consultation today.',
+    intro: 'The foundation of great results is a great consultation. At La Belle, your initial consultation is a comprehensive, unhurried assessment of your skin health, concerns and aesthetic goals. We use Visia complexion analysis, discuss your history and lifestyle, and take the time to truly understand what you want to achieve — then design a realistic, personalized treatment and skincare plan to get you there.',
+    benefits: [
+      'Visia complexion analysis included at no charge',
+      'Thorough skin health assessment with no pressure to purchase',
+      'Candid, expert guidance on the most effective treatments for your concerns',
+      'Personalized home skincare recommendations using medical-grade products',
+      'Realistic expectations and transparent pricing',
+      'A treatment roadmap designed around your timeline and budget',
+    ],
+    process: [
+      { step: 'Intake & History', desc: 'We review your skin and health history, current skincare routine, any previous treatments, and your primary concerns and goals.' },
+      { step: 'Visia Analysis', desc: 'Multi-spectral skin imaging captures objective data on your skin\'s surface and subsurface conditions, giving us a comprehensive picture to guide recommendations.' },
+      { step: 'Expert Recommendations', desc: 'Based on your analysis and goals, we present a customized treatment plan with options at various price points, explain expected outcomes, and answer every question you have.' },
+      { step: 'Skincare Plan', desc: 'We develop a personalized home skincare regimen using medical-grade products from SkinCeuticals, Vivier, EltaMD or Skinbetter Science — chosen specifically for your skin profile.' },
+    ],
+    faqs: [
+      { q: 'How long does a consultation take?', a: 'Initial consultations are approximately 45–60 minutes, ensuring we have adequate time for a thorough assessment and detailed discussion.' },
+      { q: 'Is the consultation free?', a: 'Please contact us or check our current booking page for consultation fee information, as this may vary. Any consultation fee is typically applied toward treatment.' },
+      { q: 'Do I have to commit to any treatment?', a: 'Absolutely not. Our consultation is designed to educate and inform. There is never any pressure to book or purchase — we want you to leave feeling empowered with knowledge about your skin.' },
+    ],
+    related: ['visia-analysis', 'botox-dysport', 'dermal-fillers'],
+  },
+  {
+    slug: 'skinceuticals',
+    title: 'SkinCeuticals®',
+    tagline: 'Science-backed skincare trusted by dermatologists worldwide',
+    heroImg: '/images/6875184045bbd1f01958d396_optimized_1019_c1019x1273-0x0.jpg',
+    metaDesc: 'SkinCeuticals® medical-grade skincare available at La Belle Medical Aesthetic Clinic in Quispamsis, NB. Antioxidant serums, correctives and preventative skincare. Book a consultation.',
+    intro: 'SkinCeuticals® is the gold standard in evidence-based skincare, formulated according to pharmaceutical standards and backed by decades of clinical research. Their products are available exclusively through medical professionals and are designed to be used as part of a comprehensive skin health regimen that prepares and protects skin before and after medical aesthetic treatments. At La Belle, we carry the core SkinCeuticals® collection and can recommend the right products for your specific skin type and concerns.',
+    benefits: [
+      'Pharmaceutical-grade formulations with proven clinical efficacy',
+      'Advanced antioxidant protection (C E Ferulic, Phloretin CF)',
+      'Medical-grade correctives for hyperpigmentation, aging and acne',
+      'Pre- and post-treatment skincare support',
+      'Complements and enhances in-clinic treatments',
+      'Recommended and retailed exclusively through medical professionals',
+    ],
+    process: [
+      { step: 'Skin Assessment', desc: 'During your consultation, we assess your skin type, concerns and current routine to identify the SkinCeuticals® products that will most benefit your skin.' },
+      { step: 'Regimen Design', desc: 'We build a layered regimen — typically a corrective serum, moisturizer and SPF — customized to your skin\'s needs and how it will interact with your in-clinic treatments.' },
+      { step: 'Product Education', desc: 'We walk you through exactly how and when to use each product for maximum efficacy, including how to layer with other products in your routine.' },
+    ],
+    faqs: [
+      { q: 'What is SkinCeuticals® most known for?', a: 'SkinCeuticals® is most renowned for their antioxidant vitamin C serums, particularly C E Ferulic, which is considered the gold standard for daytime antioxidant protection and brightening.' },
+      { q: 'Can I use SkinCeuticals® with other brands?', a: 'Yes — SkinCeuticals® products are designed to complement medical-grade treatments and can be layered with other quality skincare. We\'ll advise on ideal combinations.' },
+      { q: 'Are SkinCeuticals® products available online?', a: 'SkinCeuticals® authentic products are sold exclusively through authorized medical providers like La Belle — not online retailers — to ensure product integrity and proper guidance.' },
+    ],
+    related: ['vivier', 'eltamd', 'consultation'],
+  },
+  {
+    slug: 'vivier',
+    title: 'Vivier Skin',
+    tagline: 'Canada\'s leading prescription-grade brightening and correction system',
+    heroImg: '/images/6876a1917f9401c6a8eed2f3_optimized_1019_c1019x1273-0x0.jpg',
+    metaDesc: 'Vivier Skin medical-grade skincare at La Belle Medical Aesthetic Clinic in Quispamsis, NB. Prescription-grade vitamin C, brightening treatments and corrective skincare. Book today.',
+    intro: 'Vivier Skin is a Canadian medical-grade skincare line renowned for its advanced vitamin C formulations and brightening treatments. Developed in collaboration with physicians and dermatologists, Vivier products are available only through medical professionals and deliver prescription-strength results at home. They are particularly effective for hyperpigmentation, uneven skin tone, sun damage, and post-treatment skin maintenance.',
+    benefits: [
+      'Canada\'s premier prescription-grade vitamin C skincare',
+      'Highly effective for hyperpigmentation and melasma management',
+      'Enhances and prolongs in-clinic treatment results',
+      'Clinician-formulated for medical-grade skin concerns',
+      'Brightening, correcting and protecting formulations',
+      'Ideal complement to laser and peel treatments',
+    ],
+    process: [
+      { step: 'Assessment', desc: 'We evaluate your skin tone, pigmentation concerns and treatment history to determine the appropriate Vivier products for your regimen.' },
+      { step: 'Protocol Design', desc: 'A step-by-step protocol is created, typically including a vitamin C brightening serum, a corrective treatment, and SPF — optimized for your skin\'s specific needs.' },
+      { step: 'Guidance & Follow-up', desc: 'We provide clear instructions for use and monitor progress, adjusting the protocol as your skin responds and improves over time.' },
+    ],
+    faqs: [
+      { q: 'Is Vivier available without a prescription?', a: 'Vivier products are sold exclusively through authorized medical providers. While not requiring a prescription in the traditional sense, they are only available after a professional consultation to ensure appropriate use.' },
+      { q: 'Who is Vivier best for?', a: 'Vivier is particularly well-suited for clients dealing with hyperpigmentation, melasma, uneven skin tone, or sun damage, and for those looking for high-potency vitamin C antioxidant protection.' },
+      { q: 'Can Vivier be used after a peel or laser treatment?', a: 'Yes — Vivier has specific post-procedure protocols designed to protect and enhance the results of chemical peels and laser treatments.' },
+    ],
+    related: ['skinceuticals', 'eltamd', 'chemical-peels'],
+  },
+  {
+    slug: 'eltamd',
+    title: 'EltaMD',
+    tagline: 'Clinician-recommended sun protection and skincare',
+    heroImg: '/images/687519a4f7269931b26765ae_optimized_1080_c999x999-81x81.jpg',
+    metaDesc: 'EltaMD sunscreen and skincare at La Belle Medical Aesthetic Clinic in Quispamsis, NB. Dermatologist-recommended SPF products for medical-grade sun protection. Book a consultation.',
+    intro: 'EltaMD is the #1 sunscreen recommended by dermatologists and plastic surgeons in the United States, trusted by skin health professionals for its clean formulations, broad-spectrum UV protection, and skin-barrier-supporting ingredients. Available exclusively through medical providers, EltaMD sunscreens are formulated with zinc oxide and gentle, non-irritating ingredients suitable for all skin types — including post-procedure and sensitive skin.',
+    benefits: [
+      '#1 dermatologist-recommended sunscreen brand',
+      'Broad-spectrum UVA/UVB protection with transparent zinc oxide',
+      'Formulated for post-procedure and sensitive skin',
+      'Non-comedogenic and non-irritating',
+      'Doubles as a skincare product with hydrating and antioxidant ingredients',
+      'Available in tinted and untinted formulas for all skin tones',
+    ],
+    process: [
+      { step: 'SPF Consultation', desc: 'We recommend the appropriate EltaMD SPF formulation based on your skin type, lifestyle, and whether you are in a post-treatment phase.' },
+      { step: 'Application Guidance', desc: 'We teach proper SPF application technique — including the amount needed and frequency of reapplication — to ensure maximum protection.' },
+    ],
+    faqs: [
+      { q: 'Why is SPF so important after aesthetic treatments?', a: 'After any skin treatment — peels, laser, microneedling — the skin is more vulnerable to UV damage and pigmentation changes. Daily broad-spectrum SPF is essential to protect your investment and prevent new sun damage.' },
+      { q: 'Does EltaMD leave a white cast?', a: 'EltaMD\'s zinc-based formulas use micronized zinc for a sheer, transparent finish. Tinted options are also available for a cosmetically elegant appearance on all skin tones.' },
+    ],
+    related: ['skinceuticals', 'vivier', 'consultation'],
+  },
+  {
+    slug: 'skinbetter',
+    title: 'Skinbetter Science',
+    tagline: 'Award-winning corrective formulas with patented delivery technology',
+    heroImg: '/images/6875184ff7269931b2675fca_optimized_1019.jpg',
+    metaDesc: 'Skinbetter Science medical-grade skincare at La Belle Medical Aesthetic Clinic in Quispamsis, NB. Patented corrective formulas for transformative results. Book a consultation.',
+    intro: 'Skinbetter Science is a physician-exclusive skincare brand recognized for its patented delivery technologies that dramatically enhance ingredient efficacy and skin tolerability. Their award-winning formulations — including the InterFuse line and Alto Defense Serum — represent the cutting edge of cosmeceutical science, delivering transformative results that previously required clinic-only treatments. Available exclusively through medical professionals, Skinbetter Science products are a powerful complement to any treatment plan.',
+    benefits: [
+      'Patented delivery systems for superior ingredient penetration',
+      'Award-winning formulations recognized by leading medical societies',
+      'Alto Defense Serum: 19-antioxidant combination for unparalleled protection',
+      'Dramatically reduces appearance of lines, wrinkles and photodamage',
+      'Highly tolerable, even for sensitive skin',
+      'Physician-exclusive for guaranteed authenticity and results',
+    ],
+    process: [
+      { step: 'Skin Consultation', desc: 'We assess your skin type, primary concerns and current regimen to identify the Skinbetter Science products that will deliver the greatest transformation.' },
+      { step: 'Regimen Integration', desc: 'We integrate Skinbetter Science products into a complete regimen, advising on how they work alongside your existing products and in-clinic treatments.' },
+      { step: 'Progress Monitoring', desc: 'We follow up to assess how your skin is responding and make adjustments to your regimen as needed for optimal results.' },
+    ],
+    faqs: [
+      { q: 'What makes Skinbetter Science unique?', a: 'Skinbetter Science holds multiple patents on their delivery technologies, which allow active ingredients to be absorbed more efficiently and with less irritation than traditional formulations. The science behind their products is extensive and peer-reviewed.' },
+      { q: 'Can Skinbetter Science replace in-clinic treatments?', a: 'No — but they significantly enhance and prolong in-clinic treatment results. They also deliver meaningful improvement on their own for those not yet ready for in-clinic treatments.' },
+    ],
+    related: ['skinceuticals', 'vivier', 'consultation'],
+  },
+];
+
+export function getStaticPaths() {
+  const allServices = [
+    { slug: 'botox-dysport' }, { slug: 'dermal-fillers' }, { slug: 'sculptra' },
+    { slug: 'skin-boosters' }, { slug: 'vamp' }, { slug: 'laser-treatments' },
+    { slug: 'laser-facials' }, { slug: 'potenza' }, { slug: 'microneedling' },
+    { slug: 'prp' }, { slug: 'chemical-peels' }, { slug: 'sclerotherapy' },
+    { slug: 'latisse' }, { slug: 'visia-analysis' }, { slug: 'lesion-removal' },
+    { slug: 'consultation' }, { slug: 'skinceuticals' }, { slug: 'vivier' },
+    { slug: 'eltamd' }, { slug: 'skinbetter' },
+  ];
+  return allServices.map(s => ({ params: { slug: s.slug } }));
+}
+
+const { slug } = Astro.params;
+const service = services.find(s => s.slug === slug)!;
+
+// Build related services array
+const relatedServices = service.related
+  .map(r => services.find(s => s.slug === r))
+  .filter(Boolean);
+---
+
+<Layout
+  title={`${service.title} — La Belle Medical Aesthetic Clinic`}
+  description={service.metaDesc}
+>
+
+  <!-- Hero -->
+  <section class="svc-hero">
+    <div class="svc-hero__bg">
+      <img
+        src={service.heroImg}
+        alt={service.title}
+        loading="eager"
+        fetchpriority="high"
+        width="1400"
+        height="700"
+      />
+      <div class="svc-hero__overlay"></div>
+    </div>
+    <div class="container svc-hero__content">
+      <a href="/services" class="svc-hero__back">← All Services</a>
+      <p class="eyebrow" style="color:var(--rose)">{service.tagline}</p>
+      <h1 style="color:var(--white)">{service.title}</h1>
+      <div class="divider"></div>
+      <a
+        href="https://labellemedicalclinic.janeapp.com/"
+        target="_blank"
+        rel="noopener"
+        class="btn btn--primary"
+      >
+        Book This Treatment
+      </a>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="section svc-intro">
+    <div class="container svc-intro__grid">
+      <div class="svc-intro__text" data-reveal>
+        <p class="eyebrow">Overview</p>
+        <h2>About This Treatment</h2>
+        <div class="divider divider--left"></div>
+        <p class="lead">{service.intro}</p>
+        <a
+          href="https://labellemedicalclinic.janeapp.com/"
+          target="_blank"
+          rel="noopener"
+          class="btn btn--outline"
+          style="margin-top:2rem"
+        >
+          Book a Consultation
+        </a>
+      </div>
+      <div class="svc-intro__image" data-reveal data-delay="150">
+        <img
+          src={service.heroImg}
+          alt={service.title}
+          loading="lazy"
+          width="600"
+          height="700"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="section svc-benefits" style="background:var(--cream-dark)">
+    <div class="container">
+      <div class="text-center" data-reveal="fade">
+        <p class="eyebrow">Why Choose This Treatment</p>
+        <h2>Key Benefits</h2>
+        <div class="divider"></div>
+      </div>
+      <ul class="benefits-grid">
+        {service.benefits.map((b, i) => (
+          <li class="benefit-card" data-reveal data-delay={String((i % 3 + 1) * 100)}>
+            <span class="benefit-card__icon" aria-hidden="true">✦</span>
+            <p>{b}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section svc-process">
+    <div class="container">
+      <div class="text-center" data-reveal="fade">
+        <p class="eyebrow">What to Expect</p>
+        <h2>Your Treatment Journey</h2>
+        <div class="divider"></div>
+      </div>
+      <ol class="process-steps">
+        {service.process.map((step, i) => (
+          <li class="process-step" data-reveal data-delay={String((i + 1) * 100)}>
+            <span class="process-step__num">{String(i + 1).padStart(2, '0')}</span>
+            <div class="process-step__content">
+              <h3 class="process-step__title">{step.step}</h3>
+              <p class="process-step__desc">{step.desc}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section svc-faq" style="background:var(--cream-dark)">
+    <div class="container svc-faq__inner">
+      <div data-reveal="fade">
+        <p class="eyebrow">Common Questions</p>
+        <h2>Frequently Asked Questions</h2>
+        <div class="divider divider--left"></div>
+      </div>
+      <dl class="faq-list">
+        {service.faqs.map((faq, i) => (
+          <div class="faq-item" data-reveal data-delay={String((i + 1) * 80)}>
+            <dt class="faq-item__q">
+              <button class="faq-item__btn" aria-expanded="false">
+                {faq.q}
+                <span class="faq-item__icon" aria-hidden="true">+</span>
+              </button>
+            </dt>
+            <dd class="faq-item__a">
+              <p>{faq.a}</p>
+            </dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  {relatedServices.length > 0 && (
+    <section class="section svc-related">
+      <div class="container">
+        <div class="text-center" data-reveal="fade">
+          <p class="eyebrow">You May Also Like</p>
+          <h2>Related Treatments</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="related-grid">
+          {relatedServices.map((r, i) => (
+            <a href={`/services/${r!.slug}`} class="related-card" data-reveal data-delay={String((i + 1) * 100)}>
+              <div class="related-card__img">
+                <img src={r!.heroImg} alt={r!.title} loading="lazy" width="400" height="300" />
+              </div>
+              <div class="related-card__body">
+                <h3 class="related-card__title">{r!.title}</h3>
+                <p class="related-card__tag">{r!.tagline}</p>
+                <span class="related-card__link">Learn More →</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- CTA -->
+  <section class="section svc-cta" style="background:var(--charcoal)">
+    <div class="container text-center">
+      <p class="eyebrow" style="color:var(--rose)" data-reveal="fade">Ready to Get Started?</p>
+      <h2 style="color:var(--white)" data-reveal data-delay="100">Book Your {service.title} Consultation</h2>
+      <div class="divider" data-reveal="fade" data-delay="200"></div>
+      <p style="color:rgba(255,255,255,0.7); max-width:54ch; margin-inline:auto" data-reveal data-delay="200">
+        Our experienced team is here to answer your questions and design a personalized treatment plan tailored to your unique skin and goals.
+      </p>
+      <div class="svc-cta__actions" data-reveal data-delay="300">
+        <a href="https://labellemedicalclinic.janeapp.com/" target="_blank" rel="noopener" class="btn btn--primary">
+          Book Online
+        </a>
+        <a href="/contact" class="btn btn--outline-white">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+/* ── Hero ── */
+.svc-hero {
+  position: relative;
+  height: 70vh;
+  min-height: 460px;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 5rem;
+}
+.svc-hero__bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.svc-hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+.svc-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.25) 60%, rgba(0,0,0,0.1) 100%);
+}
+.svc-hero__content {
+  position: relative;
+  z-index: 1;
+}
+.svc-hero__back {
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 1.5rem;
+  transition: color 0.3s;
+}
+.svc-hero__back:hover { color: var(--rose); }
+.svc-hero__content h1 {
+  margin-top: 0.5rem;
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+}
+
+/* ── Intro ── */
+.svc-intro__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+.svc-intro__image {
+  overflow: hidden;
+  border-radius: 2px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.12);
+}
+.svc-intro__image img {
+  width: 100%;
+  height: 560px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s var(--ease);
+}
+.svc-intro__image:hover img { transform: scale(1.03); }
+
+/* ── Benefits ── */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+  list-style: none;
+}
+.benefit-card {
+  background: var(--white);
+  padding: 2rem 1.75rem;
+  border-bottom: 2px solid var(--rose);
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.benefit-card__icon {
+  color: var(--rose);
+  font-size: 0.75rem;
+  flex-shrink: 0;
+  margin-top: 0.35rem;
+}
+.benefit-card p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--charcoal);
+  margin: 0;
+}
+
+/* ── Process ── */
+.process-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 3rem;
+  list-style: none;
+  counter-reset: none;
+  max-width: 780px;
+  margin-inline: auto;
+}
+.process-step {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 2rem;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid rgba(213,164,148,0.2);
+  align-items: start;
+}
+.process-step:first-child { padding-top: 0; }
+.process-step:last-child { border-bottom: none; }
+.process-step__num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: var(--rose);
+  line-height: 1;
+  opacity: 0.4;
+}
+.process-step__title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--charcoal);
+  margin-bottom: 0.5rem;
+}
+.process-step__desc {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.8;
+  color: var(--charcoal-mid);
+  margin: 0;
+}
+
+/* ── FAQ ── */
+.svc-faq__inner {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  gap: 6rem;
+  align-items: start;
+}
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.faq-item {
+  border-bottom: 1px solid rgba(213,164,148,0.25);
+}
+.faq-item__btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1.25rem 0;
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--charcoal);
+  cursor: pointer;
+  gap: 1rem;
+  transition: color 0.2s;
+}
+.faq-item__btn:hover { color: var(--rose); }
+.faq-item__icon {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--rose);
+  flex-shrink: 0;
+  transition: transform 0.3s var(--ease);
+  line-height: 1;
+}
+.faq-item__btn[aria-expanded="true"] .faq-item__icon { transform: rotate(45deg); }
+.faq-item__a {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s var(--ease);
+}
+.faq-item__a p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.85;
+  color: var(--charcoal-mid);
+  padding-bottom: 1.25rem;
+  margin: 0;
+}
+
+/* ── Related ── */
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.related-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+  text-decoration: none;
+}
+.related-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.12);
+}
+.related-card__img {
+  overflow: hidden;
+  height: 220px;
+}
+.related-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease);
+}
+.related-card:hover .related-card__img img { transform: scale(1.06); }
+.related-card__body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.related-card__title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--charcoal);
+}
+.related-card__tag {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.78rem;
+  color: var(--charcoal-mid);
+  line-height: 1.6;
+}
+.related-card__link {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--rose);
+  margin-top: 0.5rem;
+}
+
+/* ── CTA ── */
+.svc-cta__actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .svc-intro__grid { grid-template-columns: 1fr; gap: 3rem; }
+  .svc-intro__image { order: -1; }
+  .svc-intro__image img { height: 380px; }
+  .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+  .svc-faq__inner { grid-template-columns: 1fr; gap: 3rem; }
+  .related-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .svc-hero { height: 55vh; }
+  .benefits-grid { grid-template-columns: 1fr; }
+  .process-step { grid-template-columns: 50px 1fr; gap: 1.25rem; }
+  .process-step__num { font-size: 2.5rem; }
+  .related-grid { grid-template-columns: 1fr; }
+}
+</style>
+
+<script>
+// FAQ accordion
+document.querySelectorAll<HTMLButtonElement>('.faq-item__btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const isOpen = btn.getAttribute('aria-expanded') === 'true';
+    // Close all
+    document.querySelectorAll<HTMLButtonElement>('.faq-item__btn').forEach(b => {
+      b.setAttribute('aria-expanded', 'false');
+      const a = b.closest('.faq-item')?.querySelector<HTMLElement>('.faq-item__a');
+      if (a) a.style.maxHeight = '0';
+    });
+    // Open clicked if was closed
+    if (!isOpen) {
+      btn.setAttribute('aria-expanded', 'true');
+      const answer = btn.closest('.faq-item')?.querySelector<HTMLElement>('.faq-item__a');
+      if (answer) answer.style.maxHeight = answer.scrollHeight + 'px';
+    }
+  });
+});
+</script>
